@@ -22,3 +22,10 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+Uncomment
+
+# TODO Comment out this rule if you are OK with secrets being uploaded to the repo
+#config/initializers/secret_token.rb
+#config/master.key

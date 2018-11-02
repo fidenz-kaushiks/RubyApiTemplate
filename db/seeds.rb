@@ -5,9 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
-#  Uncomment this section and add user Roles That you want
-UserRole.create!([
-  { role_name: 'Admin', slug: 'admin' },
-  { role_name: 'User', slug: 'user' }
-])
+if Rails.env.development?
+  #  Uncomment this section and add user Roles That you want
+  UserRole.create!([
+    { role_name: 'Admin', slug: 'admin' },
+    { role_name: 'User', slug: 'user' }
+  ])
+end

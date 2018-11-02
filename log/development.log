@@ -205,3 +205,1800 @@ FOREIGN KEY ("user_role_id")
   [1m[36mUserRole Load (0.2ms)[0m  [1m[34mSELECT  "user_roles".* FROM "user_roles" WHERE "user_roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "user_role_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "srimal@gmail.com"], ["encrypted_password", "$2a$11$7JOVejIHw74wei5XNdGA9O8jbC3kfpqIr4lvc1Xxgs6W2rOsWlJya"], ["user_role_id", 1], ["created_at", "2018-11-01 13:45:51.606537"], ["updated_at", "2018-11-01 13:45:51.606537"]]
   [1m[35m (13.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (17.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (15.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateUserRoles (20181101103627)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "user_roles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "role_name" varchar, "slug" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181101103627_create_user_roles.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181101103627"]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (21.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to DeviseTokenAuthCreateUsers (20181102010330)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to DeviseTokenAuthCreateUsers (20181102010330)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to DeviseTokenAuthCreateUsers (20181102010330)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to DeviseTokenAuthCreateUsers (20181102010330)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to DeviseTokenAuthCreateUsers (20181102010330)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-11-02 01:17:39.906541"], ["updated_at", "2018-11-02 01:17:39.906541"]]
+  ↳ bin/rails:9
+  [1m[35m (8.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (16.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (9.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateUserRoles (20181101103627)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "user_roles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "role_name" varchar, "slug" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181101103627_create_user_roles.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181101103627"]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (9.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to DeviseTokenAuthCreateUsers (20181102010330)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to DeviseTokenAuthCreateUsers (20181102010330)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20181102010330_devise_token_auth_create_users.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "provider" varchar DEFAULT 'email' NOT NULL, "uid" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "allow_password_change" boolean DEFAULT 0, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "confirmation_token" varchar, "confirmed_at" datetime, "confirmation_sent_at" datetime, "unconfirmed_email" varchar, "name" varchar, "nickname" varchar, "image" varchar, "email" varchar, "tokens" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181102010330_devise_token_auth_create_users.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/migrate/20181102010330_devise_token_auth_create_users.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_uid_and_provider" ON "users" ("uid", "provider")[0m
+  ↳ db/migrate/20181102010330_devise_token_auth_create_users.rb:51
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/migrate/20181102010330_devise_token_auth_create_users.rb:52
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  ↳ db/migrate/20181102010330_devise_token_auth_create_users.rb:53
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181102010330"]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (15.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-11-02 01:20:14.082242"], ["updated_at", "2018-11-02 01:20:14.082242"]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (19.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."provider" = ? LIMIT ?[0m  [["email", "test@test.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUserRole Load (0.4ms)[0m  [1m[34mSELECT  "user_roles".* FROM "user_roles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUserRole Create (0.2ms)[0m  [1m[32mINSERT INTO "user_roles" ("role_name", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["role_name", "Admin"], ["slug", "admin"], ["created_at", "2018-11-02 01:29:41.333592"], ["updated_at", "2018-11-02 01:29:41.333592"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUserRole Create (0.2ms)[0m  [1m[32mINSERT INTO "user_roles" ("role_name", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["role_name", "User"], ["slug", "user"], ["created_at", "2018-11-02 01:29:41.341948"], ["updated_at", "2018-11-02 01:29:41.341948"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUserRole Load (0.2ms)[0m  [1m[34mSELECT  "user_roles".* FROM "user_roles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."provider" = ? LIMIT ?[0m  [["email", "test@test.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (10.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (16.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateUserRoles (20181101103627)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "user_roles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "role_name" varchar, "slug" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181101103627_create_user_roles.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181101103627"]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to DeviseTokenAuthCreateUsers (20181102010330)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "provider" varchar DEFAULT 'email' NOT NULL, "uid" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "allow_password_change" boolean DEFAULT 0, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "confirmation_token" varchar, "confirmed_at" datetime, "confirmation_sent_at" datetime, "unconfirmed_email" varchar, "name" varchar, "nickname" varchar, "image" varchar, "email" varchar, "user_role_id" integer, "tokens" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_fa83e8f093"
+FOREIGN KEY ("user_role_id")
+  REFERENCES "user_roles" ("id")
+)[0m
+  ↳ db/migrate/20181102010330_devise_token_auth_create_users.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_users_on_user_role_id" ON "users" ("user_role_id")[0m
+  ↳ db/migrate/20181102010330_devise_token_auth_create_users.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/migrate/20181102010330_devise_token_auth_create_users.rb:51
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_uid_and_provider" ON "users" ("uid", "provider")[0m
+  ↳ db/migrate/20181102010330_devise_token_auth_create_users.rb:52
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/migrate/20181102010330_devise_token_auth_create_users.rb:53
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  ↳ db/migrate/20181102010330_devise_token_auth_create_users.rb:54
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181102010330"]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (22.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-11-02 01:31:45.115951"], ["updated_at", "2018-11-02 01:31:45.115951"]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (13.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUserRole Create (0.2ms)[0m  [1m[32mINSERT INTO "user_roles" ("role_name", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["role_name", "Admin"], ["slug", "admin"], ["created_at", "2018-11-02 01:31:49.347632"], ["updated_at", "2018-11-02 01:31:49.347632"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (10.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUserRole Create (0.2ms)[0m  [1m[32mINSERT INTO "user_roles" ("role_name", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["role_name", "User"], ["slug", "user"], ["created_at", "2018-11-02 01:31:49.359423"], ["updated_at", "2018-11-02 01:31:49.359423"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (19.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."provider" = ? LIMIT ?[0m  [["email", "test@test.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUserRole Load (0.1ms)[0m  [1m[34mSELECT  "user_roles".* FROM "user_roles" WHERE "user_roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "email", "user_role_id", "tokens", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test@test.com"], ["encrypted_password", "$2a$11$YJ0NtIjGIsaViM08vgmlde3kqpa5Jjj6rCXoWAb1eU41jgQ5nZA3m"], ["email", "test@test.com"], ["user_role_id", 1], ["tokens", "{}"], ["created_at", "2018-11-02 01:32:32.088019"], ["updated_at", "2018-11-02 01:32:32.088019"]]
+  [1m[35m (8.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."provider" = ? LIMIT ?[0m  [["email", "test@test.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUserRole Load (0.1ms)[0m  [1m[34mSELECT  "user_roles".* FROM "user_roles" WHERE "user_roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "email", "user_role_id", "tokens", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "test@test.com"], ["encrypted_password", "$2a$11$xZ5.YXAYfRvZ4UfD5mGYO.xTEVxM/yikK6v12fD1pEztdBRmGfKHO"], ["email", "test@test.com"], ["user_role_id", 1], ["tokens", "{}"], ["created_at", "2018-11-02 01:34:21.337288"], ["updated_at", "2018-11-02 01:34:21.337288"]]
+  [1m[35m (16.2ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2018-11-02 07:07:02 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (2.7ms)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-11-02 07:07:02 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/auth/sign_in" for 127.0.0.1 at 2018-11-02 07:08:29 +0530
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test@test.com", "password"=>"[FILTERED]", "session"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}
+HTTP Origin header (chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop) didn't match request.base_url (http://localhost:3000)
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.1) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.1) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+devise (4.5.0) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (5.2.1) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.1) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.1) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.1) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (5.2.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/auth/sign_in" for 127.0.0.1 at 2018-11-02 07:08:55 +0530
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test@test.com", "password"=>"[FILTERED]"}
+HTTP Origin header (chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop) didn't match request.base_url (http://localhost:3000)
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.1) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.1) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+devise (4.5.0) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (5.2.1) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.1) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.1) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.1) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (5.2.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/auth/sign_in" for 127.0.0.1 at 2018-11-02 07:11:05 +0530
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}}
+HTTP Origin header (chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop) didn't match request.base_url (http://localhost:3000)
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.1) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.1) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+devise (4.5.0) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (5.2.1) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.1) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.1) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.1) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (5.2.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/auth/sign_in" for 127.0.0.1 at 2018-11-02 07:13:20 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}}
+Unpermitted parameters: :user, :session
+Completed 401 Unauthorized in 21ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2018-11-02 07:13:30 +0530
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test@test.com", "password"=>"[FILTERED]", "session"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'test@test.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+Completed 401 Unauthorized in 155ms (Views: 0.2ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2018-11-02 07:13:32 +0530
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test@test.com", "password"=>"[FILTERED]", "session"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'test@test.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+Completed 401 Unauthorized in 133ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2018-11-02 07:13:33 +0530
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test@test.com", "password"=>"[FILTERED]", "session"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'test@test.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+Completed 401 Unauthorized in 134ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2018-11-02 07:13:43 +0530
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test@test.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'test@test.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUserRole Load (0.1ms)[0m  [1m[34mSELECT  "user_roles".* FROM "user_roles" WHERE "user_roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"HM3PhgzsxtAeOgG7_GuVbg\":{\"token\":\"$2a$10$V2mEMdaWR2AsWyteU5Of6.8oYA7Iv9F86GcwICb5gIxqilTsma5VO\",\"expiry\":1542332623}}"], ["updated_at", "2018-11-02 01:43:43.569943"], ["id", 2]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (8.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUserRole Load (0.1ms)[0m  [1m[34mSELECT  "user_roles".* FROM "user_roles" WHERE "user_roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUserRole Load (0.1ms)[0m  [1m[34mSELECT  "user_roles".* FROM "user_roles" WHERE "user_roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"HM3PhgzsxtAeOgG7_GuVbg\":{\"token\":\"$2a$10$NgLvUJGu5z67cLP.9.Huru4dDqIVO4UOfD5qCSDeYnaqk4eAeVjYG\",\"expiry\":1542332623,\"last_token\":\"$2a$10$V2mEMdaWR2AsWyteU5Of6.8oYA7Iv9F86GcwICb5gIxqilTsma5VO\",\"updated_at\":\"2018-11-02T01:43:43.591Z\"}}"], ["updated_at", "2018-11-02 01:43:43.658266"], ["id", 2]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (15.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 313ms (Views: 0.2ms | ActiveRecord: 26.2ms)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2018-11-02 07:13:50 +0530
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test@test.com", "password"=>"[FILTERED]", "session"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'test@test.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+Completed 401 Unauthorized in 135ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2018-11-02 07:13:51 +0530
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test@test.com", "password"=>"[FILTERED]", "session"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'test@test.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+Completed 401 Unauthorized in 134ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2018-11-02 07:13:58 +0530
+  
+Rack::QueryParser::InvalidParameterError (invalid %-encoding ({
+		"email": "test@test.com",
+		"password": "!Q@W#E$R%T"
+})):
+  
+rack (2.0.5) lib/rack/query_parser.rb:72:in `rescue in parse_nested_query'
+rack (2.0.5) lib/rack/query_parser.rb:60:in `parse_nested_query'
+rack (2.0.5) lib/rack/request.rb:468:in `parse_query'
+rack (2.0.5) lib/rack/request.rb:343:in `POST'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:382:in `block (2 levels) in POST'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:109:in `block in parse_formatted_parameters'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:109:in `fetch'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:109:in `parse_formatted_parameters'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.0.5) lib/rack/request.rb:57:in `fetch'
+rack (2.0.5) lib/rack/request.rb:57:in `fetch_header'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (5.2.1) lib/action_dispatch/http/filter_parameters.rb:43:in `filtered_parameters'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:23:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (5.2.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/auth/sign_in" for 127.0.0.1 at 2018-11-02 07:14:01 +0530
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test@test.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'test@test.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUserRole Load (0.1ms)[0m  [1m[34mSELECT  "user_roles".* FROM "user_roles" WHERE "user_roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (1.2ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"HM3PhgzsxtAeOgG7_GuVbg\":{\"token\":\"$2a$10$NgLvUJGu5z67cLP.9.Huru4dDqIVO4UOfD5qCSDeYnaqk4eAeVjYG\",\"expiry\":1542332623,\"last_token\":\"$2a$10$V2mEMdaWR2AsWyteU5Of6.8oYA7Iv9F86GcwICb5gIxqilTsma5VO\",\"updated_at\":\"2018-11-02T01:43:43.591Z\"},\"lTFiQ9GKdiu1sCxF4Bx5NA\":{\"token\":\"$2a$10$B8ySUSJtnsE2sJd/tCQLZuHOnzH7kAazHMEtJ3RUGv9Ceb6BRnbrO\",\"expiry\":1542332642}}"], ["updated_at", "2018-11-02 01:44:02.164423"], ["id", 2]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (15.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUserRole Load (0.1ms)[0m  [1m[34mSELECT  "user_roles".* FROM "user_roles" WHERE "user_roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUserRole Load (0.1ms)[0m  [1m[34mSELECT  "user_roles".* FROM "user_roles" WHERE "user_roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"HM3PhgzsxtAeOgG7_GuVbg\":{\"token\":\"$2a$10$NgLvUJGu5z67cLP.9.Huru4dDqIVO4UOfD5qCSDeYnaqk4eAeVjYG\",\"expiry\":1542332623,\"last_token\":\"$2a$10$V2mEMdaWR2AsWyteU5Of6.8oYA7Iv9F86GcwICb5gIxqilTsma5VO\",\"updated_at\":\"2018-11-02T01:43:43.591Z\"},\"lTFiQ9GKdiu1sCxF4Bx5NA\":{\"token\":\"$2a$10$8bR2AnyTHHzZjOmYIHRvjez9Kuq.lF8u.fT9bTZb43/jXokOzlcQm\",\"expiry\":1542332642,\"last_token\":\"$2a$10$B8ySUSJtnsE2sJd/tCQLZuHOnzH7kAazHMEtJ3RUGv9Ceb6BRnbrO\",\"updated_at\":\"2018-11-02T01:44:02.191Z\"}}"], ["updated_at", "2018-11-02 01:44:02.258595"], ["id", 2]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (15.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 328ms (Views: 0.2ms | ActiveRecord: 33.4ms)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2018-11-02 07:15:02 +0530
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test@test.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'test@test.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUserRole Load (0.1ms)[0m  [1m[34mSELECT  "user_roles".* FROM "user_roles" WHERE "user_roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (1.3ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"HM3PhgzsxtAeOgG7_GuVbg\":{\"token\":\"$2a$10$NgLvUJGu5z67cLP.9.Huru4dDqIVO4UOfD5qCSDeYnaqk4eAeVjYG\",\"expiry\":1542332623,\"last_token\":\"$2a$10$V2mEMdaWR2AsWyteU5Of6.8oYA7Iv9F86GcwICb5gIxqilTsma5VO\",\"updated_at\":\"2018-11-02T01:43:43.591Z\"},\"lTFiQ9GKdiu1sCxF4Bx5NA\":{\"token\":\"$2a$10$8bR2AnyTHHzZjOmYIHRvjez9Kuq.lF8u.fT9bTZb43/jXokOzlcQm\",\"expiry\":1542332642,\"last_token\":\"$2a$10$B8ySUSJtnsE2sJd/tCQLZuHOnzH7kAazHMEtJ3RUGv9Ceb6BRnbrO\",\"updated_at\":\"2018-11-02T01:44:02.191Z\"},\"QFfiqEcVHNaskdHdYOuQvQ\":{\"token\":\"$2a$10$heV/ITGRXUexRXlvxw6mb.nCC7Isw9v80xb.Ukf.nVv3AaGhvjZNO\",\"expiry\":1542332702}}"], ["updated_at", "2018-11-02 01:45:02.797475"], ["id", 2]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (8.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUserRole Load (0.1ms)[0m  [1m[34mSELECT  "user_roles".* FROM "user_roles" WHERE "user_roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUserRole Load (0.1ms)[0m  [1m[34mSELECT  "user_roles".* FROM "user_roles" WHERE "user_roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"HM3PhgzsxtAeOgG7_GuVbg\":{\"token\":\"$2a$10$NgLvUJGu5z67cLP.9.Huru4dDqIVO4UOfD5qCSDeYnaqk4eAeVjYG\",\"expiry\":1542332623,\"last_token\":\"$2a$10$V2mEMdaWR2AsWyteU5Of6.8oYA7Iv9F86GcwICb5gIxqilTsma5VO\",\"updated_at\":\"2018-11-02T01:43:43.591Z\"},\"lTFiQ9GKdiu1sCxF4Bx5NA\":{\"token\":\"$2a$10$8bR2AnyTHHzZjOmYIHRvjez9Kuq.lF8u.fT9bTZb43/jXokOzlcQm\",\"expiry\":1542332642,\"last_token\":\"$2a$10$B8ySUSJtnsE2sJd/tCQLZuHOnzH7kAazHMEtJ3RUGv9Ceb6BRnbrO\",\"updated_at\":\"2018-11-02T01:44:02.191Z\"},\"QFfiqEcVHNaskdHdYOuQvQ\":{\"token\":\"$2a$10$2Wxn2rG3EKF2.jeStSN0Kec0wbVDkCdVxWu/mWzxzGuPOPzdxGzaG\",\"expiry\":1542332702,\"last_token\":\"$2a$10$heV/ITGRXUexRXlvxw6mb.nCC7Isw9v80xb.Ukf.nVv3AaGhvjZNO\",\"updated_at\":\"2018-11-02T01:45:02.818Z\"}}"], ["updated_at", "2018-11-02 01:45:02.884356"], ["id", 2]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (8.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 314ms (Views: 0.2ms | ActiveRecord: 20.7ms)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2018-11-02 07:15:24 +0530
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test@test.com", "password"=>"[FILTERED]", "session"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'test@test.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+Completed 401 Unauthorized in 147ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2018-11-02 07:15:26 +0530
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test@test.com", "password"=>"[FILTERED]", "session"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'test@test.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+Completed 401 Unauthorized in 133ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2018-11-02 07:15:26 +0530
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test@test.com", "password"=>"[FILTERED]", "session"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'test@test.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+Completed 401 Unauthorized in 134ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2018-11-02 07:15:31 +0530
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test@test.com", "password"=>"[FILTERED]", "session"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'test@test.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+Completed 401 Unauthorized in 136ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2018-11-02 07:15:59 +0530
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}}
+Unpermitted parameters: :user, :session
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2018-11-02 07:15:59 +0530
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}}
+Unpermitted parameters: :user, :session
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2018-11-02 07:16:00 +0530
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}}
+Unpermitted parameters: :user, :session
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2018-11-02 07:16:00 +0530
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}}
+Unpermitted parameters: :user, :session
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2018-11-02 07:16:00 +0530
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}}
+Unpermitted parameters: :user, :session
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2018-11-02 07:16:02 +0530
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}}
+Unpermitted parameters: :user, :session
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2018-11-02 07:21:32 +0530
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test@test.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'test@test.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUserRole Load (0.1ms)[0m  [1m[34mSELECT  "user_roles".* FROM "user_roles" WHERE "user_roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"HM3PhgzsxtAeOgG7_GuVbg\":{\"token\":\"$2a$10$NgLvUJGu5z67cLP.9.Huru4dDqIVO4UOfD5qCSDeYnaqk4eAeVjYG\",\"expiry\":1542332623,\"last_token\":\"$2a$10$V2mEMdaWR2AsWyteU5Of6.8oYA7Iv9F86GcwICb5gIxqilTsma5VO\",\"updated_at\":\"2018-11-02T01:43:43.591Z\"},\"lTFiQ9GKdiu1sCxF4Bx5NA\":{\"token\":\"$2a$10$8bR2AnyTHHzZjOmYIHRvjez9Kuq.lF8u.fT9bTZb43/jXokOzlcQm\",\"expiry\":1542332642,\"last_token\":\"$2a$10$B8ySUSJtnsE2sJd/tCQLZuHOnzH7kAazHMEtJ3RUGv9Ceb6BRnbrO\",\"updated_at\":\"2018-11-02T01:44:02.191Z\"},\"QFfiqEcVHNaskdHdYOuQvQ\":{\"token\":\"$2a$10$2Wxn2rG3EKF2.jeStSN0Kec0wbVDkCdVxWu/mWzxzGuPOPzdxGzaG\",\"expiry\":1542332702,\"last_token\":\"$2a$10$heV/ITGRXUexRXlvxw6mb.nCC7Isw9v80xb.Ukf.nVv3AaGhvjZNO\",\"updated_at\":\"2018-11-02T01:45:02.818Z\"},\"eIXWKmHQA0GuCJiO-IXWKQ\":{\"token\":\"$2a$10$.a3Wk9dUSSI.Dwpb5AV.AOFESGJ5uR2NviXjsVn8K0L6dL53Vpb3e\",\"expiry\":1542333092}}"], ["updated_at", "2018-11-02 01:51:32.815859"], ["id", 2]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (9.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUserRole Load (0.1ms)[0m  [1m[34mSELECT  "user_roles".* FROM "user_roles" WHERE "user_roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUserRole Load (0.1ms)[0m  [1m[34mSELECT  "user_roles".* FROM "user_roles" WHERE "user_roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"HM3PhgzsxtAeOgG7_GuVbg\":{\"token\":\"$2a$10$NgLvUJGu5z67cLP.9.Huru4dDqIVO4UOfD5qCSDeYnaqk4eAeVjYG\",\"expiry\":1542332623,\"last_token\":\"$2a$10$V2mEMdaWR2AsWyteU5Of6.8oYA7Iv9F86GcwICb5gIxqilTsma5VO\",\"updated_at\":\"2018-11-02T01:43:43.591Z\"},\"lTFiQ9GKdiu1sCxF4Bx5NA\":{\"token\":\"$2a$10$8bR2AnyTHHzZjOmYIHRvjez9Kuq.lF8u.fT9bTZb43/jXokOzlcQm\",\"expiry\":1542332642,\"last_token\":\"$2a$10$B8ySUSJtnsE2sJd/tCQLZuHOnzH7kAazHMEtJ3RUGv9Ceb6BRnbrO\",\"updated_at\":\"2018-11-02T01:44:02.191Z\"},\"QFfiqEcVHNaskdHdYOuQvQ\":{\"token\":\"$2a$10$2Wxn2rG3EKF2.jeStSN0Kec0wbVDkCdVxWu/mWzxzGuPOPzdxGzaG\",\"expiry\":1542332702,\"last_token\":\"$2a$10$heV/ITGRXUexRXlvxw6mb.nCC7Isw9v80xb.Ukf.nVv3AaGhvjZNO\",\"updated_at\":\"2018-11-02T01:45:02.818Z\"},\"eIXWKmHQA0GuCJiO-IXWKQ\":{\"token\":\"$2a$10$smT7i02Do0WWhEgT7pZ20.Joy8TB310MvaZ629ddHSUIacsxEGZqi\",\"expiry\":1542333092,\"last_token\":\"$2a$10$.a3Wk9dUSSI.Dwpb5AV.AOFESGJ5uR2NviXjsVn8K0L6dL53Vpb3e\",\"updated_at\":\"2018-11-02T01:51:32.831Z\"}}"], ["updated_at", "2018-11-02 01:51:32.897283"], ["id", 2]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (9.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 291ms (Views: 0.3ms | ActiveRecord: 20.2ms)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2018-11-02 07:22:19 +0530
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test@test.com", "password"=>"[FILTERED]", "session"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'test@test.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+Completed 401 Unauthorized in 138ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2018-11-02 07:24:09 +0530
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test@test.com", "password"=>"[FILTERED]", "session"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'test@test.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+Completed 401 Unauthorized in 154ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2018-11-02 07:26:37 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test@test.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'test@test.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 161ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2018-11-02 07:27:01 +0530
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test@test.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'test@test.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUserRole Load (0.1ms)[0m  [1m[34mSELECT  "user_roles".* FROM "user_roles" WHERE "user_roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"HM3PhgzsxtAeOgG7_GuVbg\":{\"token\":\"$2a$10$NgLvUJGu5z67cLP.9.Huru4dDqIVO4UOfD5qCSDeYnaqk4eAeVjYG\",\"expiry\":1542332623,\"last_token\":\"$2a$10$V2mEMdaWR2AsWyteU5Of6.8oYA7Iv9F86GcwICb5gIxqilTsma5VO\",\"updated_at\":\"2018-11-02T01:43:43.591Z\"},\"lTFiQ9GKdiu1sCxF4Bx5NA\":{\"token\":\"$2a$10$8bR2AnyTHHzZjOmYIHRvjez9Kuq.lF8u.fT9bTZb43/jXokOzlcQm\",\"expiry\":1542332642,\"last_token\":\"$2a$10$B8ySUSJtnsE2sJd/tCQLZuHOnzH7kAazHMEtJ3RUGv9Ceb6BRnbrO\",\"updated_at\":\"2018-11-02T01:44:02.191Z\"},\"QFfiqEcVHNaskdHdYOuQvQ\":{\"token\":\"$2a$10$2Wxn2rG3EKF2.jeStSN0Kec0wbVDkCdVxWu/mWzxzGuPOPzdxGzaG\",\"expiry\":1542332702,\"last_token\":\"$2a$10$heV/ITGRXUexRXlvxw6mb.nCC7Isw9v80xb.Ukf.nVv3AaGhvjZNO\",\"updated_at\":\"2018-11-02T01:45:02.818Z\"},\"eIXWKmHQA0GuCJiO-IXWKQ\":{\"token\":\"$2a$10$smT7i02Do0WWhEgT7pZ20.Joy8TB310MvaZ629ddHSUIacsxEGZqi\",\"expiry\":1542333092,\"last_token\":\"$2a$10$.a3Wk9dUSSI.Dwpb5AV.AOFESGJ5uR2NviXjsVn8K0L6dL53Vpb3e\",\"updated_at\":\"2018-11-02T01:51:32.831Z\"},\"bpwwv79-EabPlcZqR7Nnmg\":{\"token\":\"$2a$10$imCkMmCF8QFbEtM/.TgxGODG5h/Pwdcex0zoiWbeMZkBjKYwsVRha\",\"expiry\":1542333421}}"], ["updated_at", "2018-11-02 01:57:01.734232"], ["id", 2]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (21.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUserRole Load (0.1ms)[0m  [1m[34mSELECT  "user_roles".* FROM "user_roles" WHERE "user_roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUserRole Load (0.1ms)[0m  [1m[34mSELECT  "user_roles".* FROM "user_roles" WHERE "user_roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"HM3PhgzsxtAeOgG7_GuVbg\":{\"token\":\"$2a$10$NgLvUJGu5z67cLP.9.Huru4dDqIVO4UOfD5qCSDeYnaqk4eAeVjYG\",\"expiry\":1542332623,\"last_token\":\"$2a$10$V2mEMdaWR2AsWyteU5Of6.8oYA7Iv9F86GcwICb5gIxqilTsma5VO\",\"updated_at\":\"2018-11-02T01:43:43.591Z\"},\"lTFiQ9GKdiu1sCxF4Bx5NA\":{\"token\":\"$2a$10$8bR2AnyTHHzZjOmYIHRvjez9Kuq.lF8u.fT9bTZb43/jXokOzlcQm\",\"expiry\":1542332642,\"last_token\":\"$2a$10$B8ySUSJtnsE2sJd/tCQLZuHOnzH7kAazHMEtJ3RUGv9Ceb6BRnbrO\",\"updated_at\":\"2018-11-02T01:44:02.191Z\"},\"QFfiqEcVHNaskdHdYOuQvQ\":{\"token\":\"$2a$10$2Wxn2rG3EKF2.jeStSN0Kec0wbVDkCdVxWu/mWzxzGuPOPzdxGzaG\",\"expiry\":1542332702,\"last_token\":\"$2a$10$heV/ITGRXUexRXlvxw6mb.nCC7Isw9v80xb.Ukf.nVv3AaGhvjZNO\",\"updated_at\":\"2018-11-02T01:45:02.818Z\"},\"eIXWKmHQA0GuCJiO-IXWKQ\":{\"token\":\"$2a$10$smT7i02Do0WWhEgT7pZ20.Joy8TB310MvaZ629ddHSUIacsxEGZqi\",\"expiry\":1542333092,\"last_token\":\"$2a$10$.a3Wk9dUSSI.Dwpb5AV.AOFESGJ5uR2NviXjsVn8K0L6dL53Vpb3e\",\"updated_at\":\"2018-11-02T01:51:32.831Z\"},\"bpwwv79-EabPlcZqR7Nnmg\":{\"token\":\"$2a$10$9kqZuqok.xb8kJaw2MDshemsOWvhyNN5yD/Mnn4KPnEseLxFyoB/m\",\"expiry\":1542333421,\"last_token\":\"$2a$10$imCkMmCF8QFbEtM/.TgxGODG5h/Pwdcex0zoiWbeMZkBjKYwsVRha\",\"updated_at\":\"2018-11-02T01:57:01.768Z\"}}"], ["updated_at", "2018-11-02 01:57:01.843657"], ["id", 2]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (20.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 337ms (Views: 0.2ms | ActiveRecord: 43.6ms)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2018-11-02 07:27:04 +0530
+  
+Rack::QueryParser::InvalidParameterError (invalid %-encoding ({
+	"email": "test@test.com",
+	"password": "!Q@W#E$R%T"
+})):
+  
+rack (2.0.5) lib/rack/query_parser.rb:72:in `rescue in parse_nested_query'
+rack (2.0.5) lib/rack/query_parser.rb:60:in `parse_nested_query'
+rack (2.0.5) lib/rack/request.rb:468:in `parse_query'
+rack (2.0.5) lib/rack/request.rb:343:in `POST'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:382:in `block (2 levels) in POST'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:109:in `block in parse_formatted_parameters'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:109:in `fetch'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:109:in `parse_formatted_parameters'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.0.5) lib/rack/request.rb:57:in `fetch'
+rack (2.0.5) lib/rack/request.rb:57:in `fetch_header'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (5.2.1) lib/action_dispatch/http/filter_parameters.rb:43:in `filtered_parameters'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:23:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (5.2.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/auth/sign_in" for 127.0.0.1 at 2018-11-02 07:27:08 +0530
+  
+Rack::QueryParser::InvalidParameterError (invalid %-encoding ({
+	"email": "test@test.com",
+	"password": "!Q@W#E$R%T"
+})):
+  
+rack (2.0.5) lib/rack/query_parser.rb:72:in `rescue in parse_nested_query'
+rack (2.0.5) lib/rack/query_parser.rb:60:in `parse_nested_query'
+rack (2.0.5) lib/rack/request.rb:468:in `parse_query'
+rack (2.0.5) lib/rack/request.rb:343:in `POST'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:382:in `block (2 levels) in POST'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:109:in `block in parse_formatted_parameters'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:109:in `fetch'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:109:in `parse_formatted_parameters'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.0.5) lib/rack/request.rb:57:in `fetch'
+rack (2.0.5) lib/rack/request.rb:57:in `fetch_header'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (5.2.1) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (5.2.1) lib/action_dispatch/http/filter_parameters.rb:43:in `filtered_parameters'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:23:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (5.2.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/auth/sign_in" for 127.0.0.1 at 2018-11-02 07:27:12 +0530
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test@test.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'test@test.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 135ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2018-11-02 07:27:25 +0530
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test@test.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'test@test.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUserRole Load (0.1ms)[0m  [1m[34mSELECT  "user_roles".* FROM "user_roles" WHERE "user_roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"HM3PhgzsxtAeOgG7_GuVbg\":{\"token\":\"$2a$10$NgLvUJGu5z67cLP.9.Huru4dDqIVO4UOfD5qCSDeYnaqk4eAeVjYG\",\"expiry\":1542332623,\"last_token\":\"$2a$10$V2mEMdaWR2AsWyteU5Of6.8oYA7Iv9F86GcwICb5gIxqilTsma5VO\",\"updated_at\":\"2018-11-02T01:43:43.591Z\"},\"lTFiQ9GKdiu1sCxF4Bx5NA\":{\"token\":\"$2a$10$8bR2AnyTHHzZjOmYIHRvjez9Kuq.lF8u.fT9bTZb43/jXokOzlcQm\",\"expiry\":1542332642,\"last_token\":\"$2a$10$B8ySUSJtnsE2sJd/tCQLZuHOnzH7kAazHMEtJ3RUGv9Ceb6BRnbrO\",\"updated_at\":\"2018-11-02T01:44:02.191Z\"},\"QFfiqEcVHNaskdHdYOuQvQ\":{\"token\":\"$2a$10$2Wxn2rG3EKF2.jeStSN0Kec0wbVDkCdVxWu/mWzxzGuPOPzdxGzaG\",\"expiry\":1542332702,\"last_token\":\"$2a$10$heV/ITGRXUexRXlvxw6mb.nCC7Isw9v80xb.Ukf.nVv3AaGhvjZNO\",\"updated_at\":\"2018-11-02T01:45:02.818Z\"},\"eIXWKmHQA0GuCJiO-IXWKQ\":{\"token\":\"$2a$10$smT7i02Do0WWhEgT7pZ20.Joy8TB310MvaZ629ddHSUIacsxEGZqi\",\"expiry\":1542333092,\"last_token\":\"$2a$10$.a3Wk9dUSSI.Dwpb5AV.AOFESGJ5uR2NviXjsVn8K0L6dL53Vpb3e\",\"updated_at\":\"2018-11-02T01:51:32.831Z\"},\"bpwwv79-EabPlcZqR7Nnmg\":{\"token\":\"$2a$10$9kqZuqok.xb8kJaw2MDshemsOWvhyNN5yD/Mnn4KPnEseLxFyoB/m\",\"expiry\":1542333421,\"last_token\":\"$2a$10$imCkMmCF8QFbEtM/.TgxGODG5h/Pwdcex0zoiWbeMZkBjKYwsVRha\",\"updated_at\":\"2018-11-02T01:57:01.768Z\"},\"Oy08LTrszHB5tHG6X5PJag\":{\"token\":\"$2a$10$pyEAd3/M2g.o7rCCv7NI2.aaXppieraR2Pvi0QmWvGYtoh1jmHyou\",\"expiry\":1542333445}}"], ["updated_at", "2018-11-02 01:57:25.669857"], ["id", 2]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (14.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUserRole Load (0.0ms)[0m  [1m[34mSELECT  "user_roles".* FROM "user_roles" WHERE "user_roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUserRole Load (0.1ms)[0m  [1m[34mSELECT  "user_roles".* FROM "user_roles" WHERE "user_roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"HM3PhgzsxtAeOgG7_GuVbg\":{\"token\":\"$2a$10$NgLvUJGu5z67cLP.9.Huru4dDqIVO4UOfD5qCSDeYnaqk4eAeVjYG\",\"expiry\":1542332623,\"last_token\":\"$2a$10$V2mEMdaWR2AsWyteU5Of6.8oYA7Iv9F86GcwICb5gIxqilTsma5VO\",\"updated_at\":\"2018-11-02T01:43:43.591Z\"},\"lTFiQ9GKdiu1sCxF4Bx5NA\":{\"token\":\"$2a$10$8bR2AnyTHHzZjOmYIHRvjez9Kuq.lF8u.fT9bTZb43/jXokOzlcQm\",\"expiry\":1542332642,\"last_token\":\"$2a$10$B8ySUSJtnsE2sJd/tCQLZuHOnzH7kAazHMEtJ3RUGv9Ceb6BRnbrO\",\"updated_at\":\"2018-11-02T01:44:02.191Z\"},\"QFfiqEcVHNaskdHdYOuQvQ\":{\"token\":\"$2a$10$2Wxn2rG3EKF2.jeStSN0Kec0wbVDkCdVxWu/mWzxzGuPOPzdxGzaG\",\"expiry\":1542332702,\"last_token\":\"$2a$10$heV/ITGRXUexRXlvxw6mb.nCC7Isw9v80xb.Ukf.nVv3AaGhvjZNO\",\"updated_at\":\"2018-11-02T01:45:02.818Z\"},\"eIXWKmHQA0GuCJiO-IXWKQ\":{\"token\":\"$2a$10$smT7i02Do0WWhEgT7pZ20.Joy8TB310MvaZ629ddHSUIacsxEGZqi\",\"expiry\":1542333092,\"last_token\":\"$2a$10$.a3Wk9dUSSI.Dwpb5AV.AOFESGJ5uR2NviXjsVn8K0L6dL53Vpb3e\",\"updated_at\":\"2018-11-02T01:51:32.831Z\"},\"bpwwv79-EabPlcZqR7Nnmg\":{\"token\":\"$2a$10$9kqZuqok.xb8kJaw2MDshemsOWvhyNN5yD/Mnn4KPnEseLxFyoB/m\",\"expiry\":1542333421,\"last_token\":\"$2a$10$imCkMmCF8QFbEtM/.TgxGODG5h/Pwdcex0zoiWbeMZkBjKYwsVRha\",\"updated_at\":\"2018-11-02T01:57:01.768Z\"},\"Oy08LTrszHB5tHG6X5PJag\":{\"token\":\"$2a$10$SweL74hllk4L.dprqDYhUO3oqqM1T5x60UobTNEitqAFF9HGD/Yq2\",\"expiry\":1542333445,\"last_token\":\"$2a$10$pyEAd3/M2g.o7rCCv7NI2.aaXppieraR2Pvi0QmWvGYtoh1jmHyou\",\"updated_at\":\"2018-11-02T01:57:25.690Z\"}}"], ["updated_at", "2018-11-02 01:57:25.756129"], ["id", 2]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (18.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 307ms (Views: 0.2ms | ActiveRecord: 34.9ms)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2018-11-02 07:27:41 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test@test.com", "password"=>"[FILTERED]", "session"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'test@test.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUserRole Load (0.1ms)[0m  [1m[34mSELECT  "user_roles".* FROM "user_roles" WHERE "user_roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"HM3PhgzsxtAeOgG7_GuVbg\":{\"token\":\"$2a$10$NgLvUJGu5z67cLP.9.Huru4dDqIVO4UOfD5qCSDeYnaqk4eAeVjYG\",\"expiry\":1542332623,\"last_token\":\"$2a$10$V2mEMdaWR2AsWyteU5Of6.8oYA7Iv9F86GcwICb5gIxqilTsma5VO\",\"updated_at\":\"2018-11-02T01:43:43.591Z\"},\"lTFiQ9GKdiu1sCxF4Bx5NA\":{\"token\":\"$2a$10$8bR2AnyTHHzZjOmYIHRvjez9Kuq.lF8u.fT9bTZb43/jXokOzlcQm\",\"expiry\":1542332642,\"last_token\":\"$2a$10$B8ySUSJtnsE2sJd/tCQLZuHOnzH7kAazHMEtJ3RUGv9Ceb6BRnbrO\",\"updated_at\":\"2018-11-02T01:44:02.191Z\"},\"QFfiqEcVHNaskdHdYOuQvQ\":{\"token\":\"$2a$10$2Wxn2rG3EKF2.jeStSN0Kec0wbVDkCdVxWu/mWzxzGuPOPzdxGzaG\",\"expiry\":1542332702,\"last_token\":\"$2a$10$heV/ITGRXUexRXlvxw6mb.nCC7Isw9v80xb.Ukf.nVv3AaGhvjZNO\",\"updated_at\":\"2018-11-02T01:45:02.818Z\"},\"eIXWKmHQA0GuCJiO-IXWKQ\":{\"token\":\"$2a$10$smT7i02Do0WWhEgT7pZ20.Joy8TB310MvaZ629ddHSUIacsxEGZqi\",\"expiry\":1542333092,\"last_token\":\"$2a$10$.a3Wk9dUSSI.Dwpb5AV.AOFESGJ5uR2NviXjsVn8K0L6dL53Vpb3e\",\"updated_at\":\"2018-11-02T01:51:32.831Z\"},\"bpwwv79-EabPlcZqR7Nnmg\":{\"token\":\"$2a$10$9kqZuqok.xb8kJaw2MDshemsOWvhyNN5yD/Mnn4KPnEseLxFyoB/m\",\"expiry\":1542333421,\"last_token\":\"$2a$10$imCkMmCF8QFbEtM/.TgxGODG5h/Pwdcex0zoiWbeMZkBjKYwsVRha\",\"updated_at\":\"2018-11-02T01:57:01.768Z\"},\"Oy08LTrszHB5tHG6X5PJag\":{\"token\":\"$2a$10$SweL74hllk4L.dprqDYhUO3oqqM1T5x60UobTNEitqAFF9HGD/Yq2\",\"expiry\":1542333445,\"last_token\":\"$2a$10$pyEAd3/M2g.o7rCCv7NI2.aaXppieraR2Pvi0QmWvGYtoh1jmHyou\",\"updated_at\":\"2018-11-02T01:57:25.690Z\"},\"6_-fHLnxsxyhZKl_lAnmyw\":{\"token\":\"$2a$10$NUkSvVs6U4.6S.rzKSze3OC5JcjkQCLEgHo9k8HVUJofQijMbc8Qi\",\"expiry\":1542333461}}"], ["updated_at", "2018-11-02 01:57:41.610550"], ["id", 2]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (9.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUserRole Load (0.1ms)[0m  [1m[34mSELECT  "user_roles".* FROM "user_roles" WHERE "user_roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUserRole Load (0.1ms)[0m  [1m[34mSELECT  "user_roles".* FROM "user_roles" WHERE "user_roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"HM3PhgzsxtAeOgG7_GuVbg\":{\"token\":\"$2a$10$NgLvUJGu5z67cLP.9.Huru4dDqIVO4UOfD5qCSDeYnaqk4eAeVjYG\",\"expiry\":1542332623,\"last_token\":\"$2a$10$V2mEMdaWR2AsWyteU5Of6.8oYA7Iv9F86GcwICb5gIxqilTsma5VO\",\"updated_at\":\"2018-11-02T01:43:43.591Z\"},\"lTFiQ9GKdiu1sCxF4Bx5NA\":{\"token\":\"$2a$10$8bR2AnyTHHzZjOmYIHRvjez9Kuq.lF8u.fT9bTZb43/jXokOzlcQm\",\"expiry\":1542332642,\"last_token\":\"$2a$10$B8ySUSJtnsE2sJd/tCQLZuHOnzH7kAazHMEtJ3RUGv9Ceb6BRnbrO\",\"updated_at\":\"2018-11-02T01:44:02.191Z\"},\"QFfiqEcVHNaskdHdYOuQvQ\":{\"token\":\"$2a$10$2Wxn2rG3EKF2.jeStSN0Kec0wbVDkCdVxWu/mWzxzGuPOPzdxGzaG\",\"expiry\":1542332702,\"last_token\":\"$2a$10$heV/ITGRXUexRXlvxw6mb.nCC7Isw9v80xb.Ukf.nVv3AaGhvjZNO\",\"updated_at\":\"2018-11-02T01:45:02.818Z\"},\"eIXWKmHQA0GuCJiO-IXWKQ\":{\"token\":\"$2a$10$smT7i02Do0WWhEgT7pZ20.Joy8TB310MvaZ629ddHSUIacsxEGZqi\",\"expiry\":1542333092,\"last_token\":\"$2a$10$.a3Wk9dUSSI.Dwpb5AV.AOFESGJ5uR2NviXjsVn8K0L6dL53Vpb3e\",\"updated_at\":\"2018-11-02T01:51:32.831Z\"},\"bpwwv79-EabPlcZqR7Nnmg\":{\"token\":\"$2a$10$9kqZuqok.xb8kJaw2MDshemsOWvhyNN5yD/Mnn4KPnEseLxFyoB/m\",\"expiry\":1542333421,\"last_token\":\"$2a$10$imCkMmCF8QFbEtM/.TgxGODG5h/Pwdcex0zoiWbeMZkBjKYwsVRha\",\"updated_at\":\"2018-11-02T01:57:01.768Z\"},\"Oy08LTrszHB5tHG6X5PJag\":{\"token\":\"$2a$10$SweL74hllk4L.dprqDYhUO3oqqM1T5x60UobTNEitqAFF9HGD/Yq2\",\"expiry\":1542333445,\"last_token\":\"$2a$10$pyEAd3/M2g.o7rCCv7NI2.aaXppieraR2Pvi0QmWvGYtoh1jmHyou\",\"updated_at\":\"2018-11-02T01:57:25.690Z\"},\"6_-fHLnxsxyhZKl_lAnmyw\":{\"token\":\"$2a$10$0vie0rB3r9lFpyJv0D.NRe0DGqRhFmzDu8BhcRy6t6TMP5lL7zsVW\",\"expiry\":1542333461,\"last_token\":\"$2a$10$NUkSvVs6U4.6S.rzKSze3OC5JcjkQCLEgHo9k8HVUJofQijMbc8Qi\",\"updated_at\":\"2018-11-02T01:57:41.633Z\"}}"], ["updated_at", "2018-11-02 01:57:41.698425"], ["id", 2]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (9.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 324ms (Views: 0.3ms | ActiveRecord: 20.6ms)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2018-11-02 07:27:42 +0530
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test@test.com", "password"=>"[FILTERED]", "session"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'test@test.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUserRole Load (0.1ms)[0m  [1m[34mSELECT  "user_roles".* FROM "user_roles" WHERE "user_roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"HM3PhgzsxtAeOgG7_GuVbg\":{\"token\":\"$2a$10$NgLvUJGu5z67cLP.9.Huru4dDqIVO4UOfD5qCSDeYnaqk4eAeVjYG\",\"expiry\":1542332623,\"last_token\":\"$2a$10$V2mEMdaWR2AsWyteU5Of6.8oYA7Iv9F86GcwICb5gIxqilTsma5VO\",\"updated_at\":\"2018-11-02T01:43:43.591Z\"},\"lTFiQ9GKdiu1sCxF4Bx5NA\":{\"token\":\"$2a$10$8bR2AnyTHHzZjOmYIHRvjez9Kuq.lF8u.fT9bTZb43/jXokOzlcQm\",\"expiry\":1542332642,\"last_token\":\"$2a$10$B8ySUSJtnsE2sJd/tCQLZuHOnzH7kAazHMEtJ3RUGv9Ceb6BRnbrO\",\"updated_at\":\"2018-11-02T01:44:02.191Z\"},\"QFfiqEcVHNaskdHdYOuQvQ\":{\"token\":\"$2a$10$2Wxn2rG3EKF2.jeStSN0Kec0wbVDkCdVxWu/mWzxzGuPOPzdxGzaG\",\"expiry\":1542332702,\"last_token\":\"$2a$10$heV/ITGRXUexRXlvxw6mb.nCC7Isw9v80xb.Ukf.nVv3AaGhvjZNO\",\"updated_at\":\"2018-11-02T01:45:02.818Z\"},\"eIXWKmHQA0GuCJiO-IXWKQ\":{\"token\":\"$2a$10$smT7i02Do0WWhEgT7pZ20.Joy8TB310MvaZ629ddHSUIacsxEGZqi\",\"expiry\":1542333092,\"last_token\":\"$2a$10$.a3Wk9dUSSI.Dwpb5AV.AOFESGJ5uR2NviXjsVn8K0L6dL53Vpb3e\",\"updated_at\":\"2018-11-02T01:51:32.831Z\"},\"bpwwv79-EabPlcZqR7Nnmg\":{\"token\":\"$2a$10$9kqZuqok.xb8kJaw2MDshemsOWvhyNN5yD/Mnn4KPnEseLxFyoB/m\",\"expiry\":1542333421,\"last_token\":\"$2a$10$imCkMmCF8QFbEtM/.TgxGODG5h/Pwdcex0zoiWbeMZkBjKYwsVRha\",\"updated_at\":\"2018-11-02T01:57:01.768Z\"},\"Oy08LTrszHB5tHG6X5PJag\":{\"token\":\"$2a$10$SweL74hllk4L.dprqDYhUO3oqqM1T5x60UobTNEitqAFF9HGD/Yq2\",\"expiry\":1542333445,\"last_token\":\"$2a$10$pyEAd3/M2g.o7rCCv7NI2.aaXppieraR2Pvi0QmWvGYtoh1jmHyou\",\"updated_at\":\"2018-11-02T01:57:25.690Z\"},\"6_-fHLnxsxyhZKl_lAnmyw\":{\"token\":\"$2a$10$0vie0rB3r9lFpyJv0D.NRe0DGqRhFmzDu8BhcRy6t6TMP5lL7zsVW\",\"expiry\":1542333461,\"last_token\":\"$2a$10$NUkSvVs6U4.6S.rzKSze3OC5JcjkQCLEgHo9k8HVUJofQijMbc8Qi\",\"updated_at\":\"2018-11-02T01:57:41.633Z\"},\"FcTvnH5fIJ-T4Qodz4x7DA\":{\"token\":\"$2a$10$P7R2AWr/kI/NjY0B5ghEBOsS5SAoFgE3ZHXEmD9LsOgDkJwKA6FIW\",\"expiry\":1542333462}}"], ["updated_at", "2018-11-02 01:57:42.855512"], ["id", 2]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (15.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUserRole Load (0.1ms)[0m  [1m[34mSELECT  "user_roles".* FROM "user_roles" WHERE "user_roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUserRole Load (0.1ms)[0m  [1m[34mSELECT  "user_roles".* FROM "user_roles" WHERE "user_roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"HM3PhgzsxtAeOgG7_GuVbg\":{\"token\":\"$2a$10$NgLvUJGu5z67cLP.9.Huru4dDqIVO4UOfD5qCSDeYnaqk4eAeVjYG\",\"expiry\":1542332623,\"last_token\":\"$2a$10$V2mEMdaWR2AsWyteU5Of6.8oYA7Iv9F86GcwICb5gIxqilTsma5VO\",\"updated_at\":\"2018-11-02T01:43:43.591Z\"},\"lTFiQ9GKdiu1sCxF4Bx5NA\":{\"token\":\"$2a$10$8bR2AnyTHHzZjOmYIHRvjez9Kuq.lF8u.fT9bTZb43/jXokOzlcQm\",\"expiry\":1542332642,\"last_token\":\"$2a$10$B8ySUSJtnsE2sJd/tCQLZuHOnzH7kAazHMEtJ3RUGv9Ceb6BRnbrO\",\"updated_at\":\"2018-11-02T01:44:02.191Z\"},\"QFfiqEcVHNaskdHdYOuQvQ\":{\"token\":\"$2a$10$2Wxn2rG3EKF2.jeStSN0Kec0wbVDkCdVxWu/mWzxzGuPOPzdxGzaG\",\"expiry\":1542332702,\"last_token\":\"$2a$10$heV/ITGRXUexRXlvxw6mb.nCC7Isw9v80xb.Ukf.nVv3AaGhvjZNO\",\"updated_at\":\"2018-11-02T01:45:02.818Z\"},\"eIXWKmHQA0GuCJiO-IXWKQ\":{\"token\":\"$2a$10$smT7i02Do0WWhEgT7pZ20.Joy8TB310MvaZ629ddHSUIacsxEGZqi\",\"expiry\":1542333092,\"last_token\":\"$2a$10$.a3Wk9dUSSI.Dwpb5AV.AOFESGJ5uR2NviXjsVn8K0L6dL53Vpb3e\",\"updated_at\":\"2018-11-02T01:51:32.831Z\"},\"bpwwv79-EabPlcZqR7Nnmg\":{\"token\":\"$2a$10$9kqZuqok.xb8kJaw2MDshemsOWvhyNN5yD/Mnn4KPnEseLxFyoB/m\",\"expiry\":1542333421,\"last_token\":\"$2a$10$imCkMmCF8QFbEtM/.TgxGODG5h/Pwdcex0zoiWbeMZkBjKYwsVRha\",\"updated_at\":\"2018-11-02T01:57:01.768Z\"},\"Oy08LTrszHB5tHG6X5PJag\":{\"token\":\"$2a$10$SweL74hllk4L.dprqDYhUO3oqqM1T5x60UobTNEitqAFF9HGD/Yq2\",\"expiry\":1542333445,\"last_token\":\"$2a$10$pyEAd3/M2g.o7rCCv7NI2.aaXppieraR2Pvi0QmWvGYtoh1jmHyou\",\"updated_at\":\"2018-11-02T01:57:25.690Z\"},\"6_-fHLnxsxyhZKl_lAnmyw\":{\"token\":\"$2a$10$0vie0rB3r9lFpyJv0D.NRe0DGqRhFmzDu8BhcRy6t6TMP5lL7zsVW\",\"expiry\":1542333461,\"last_token\":\"$2a$10$NUkSvVs6U4.6S.rzKSze3OC5JcjkQCLEgHo9k8HVUJofQijMbc8Qi\",\"updated_at\":\"2018-11-02T01:57:41.633Z\"},\"FcTvnH5fIJ-T4Qodz4x7DA\":{\"token\":\"$2a$10$KIfb58AzaBiGub/y94XQw.XiRidjy6SLkYgsw47nMHLTEkAanF6fu\",\"expiry\":1542333462,\"last_token\":\"$2a$10$P7R2AWr/kI/NjY0B5ghEBOsS5SAoFgE3ZHXEmD9LsOgDkJwKA6FIW\",\"updated_at\":\"2018-11-02T01:57:42.878Z\"}}"], ["updated_at", "2018-11-02 01:57:42.943020"], ["id", 2]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (24.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 314ms (Views: 0.2ms | ActiveRecord: 41.8ms)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2018-11-02 07:27:51 +0530
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test@test.com", "password"=>"[FILTERED]", "session"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (email = 'test@test.com' AND provider='email') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUserRole Load (0.1ms)[0m  [1m[34mSELECT  "user_roles".* FROM "user_roles" WHERE "user_roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"HM3PhgzsxtAeOgG7_GuVbg\":{\"token\":\"$2a$10$NgLvUJGu5z67cLP.9.Huru4dDqIVO4UOfD5qCSDeYnaqk4eAeVjYG\",\"expiry\":1542332623,\"last_token\":\"$2a$10$V2mEMdaWR2AsWyteU5Of6.8oYA7Iv9F86GcwICb5gIxqilTsma5VO\",\"updated_at\":\"2018-11-02T01:43:43.591Z\"},\"lTFiQ9GKdiu1sCxF4Bx5NA\":{\"token\":\"$2a$10$8bR2AnyTHHzZjOmYIHRvjez9Kuq.lF8u.fT9bTZb43/jXokOzlcQm\",\"expiry\":1542332642,\"last_token\":\"$2a$10$B8ySUSJtnsE2sJd/tCQLZuHOnzH7kAazHMEtJ3RUGv9Ceb6BRnbrO\",\"updated_at\":\"2018-11-02T01:44:02.191Z\"},\"QFfiqEcVHNaskdHdYOuQvQ\":{\"token\":\"$2a$10$2Wxn2rG3EKF2.jeStSN0Kec0wbVDkCdVxWu/mWzxzGuPOPzdxGzaG\",\"expiry\":1542332702,\"last_token\":\"$2a$10$heV/ITGRXUexRXlvxw6mb.nCC7Isw9v80xb.Ukf.nVv3AaGhvjZNO\",\"updated_at\":\"2018-11-02T01:45:02.818Z\"},\"eIXWKmHQA0GuCJiO-IXWKQ\":{\"token\":\"$2a$10$smT7i02Do0WWhEgT7pZ20.Joy8TB310MvaZ629ddHSUIacsxEGZqi\",\"expiry\":1542333092,\"last_token\":\"$2a$10$.a3Wk9dUSSI.Dwpb5AV.AOFESGJ5uR2NviXjsVn8K0L6dL53Vpb3e\",\"updated_at\":\"2018-11-02T01:51:32.831Z\"},\"bpwwv79-EabPlcZqR7Nnmg\":{\"token\":\"$2a$10$9kqZuqok.xb8kJaw2MDshemsOWvhyNN5yD/Mnn4KPnEseLxFyoB/m\",\"expiry\":1542333421,\"last_token\":\"$2a$10$imCkMmCF8QFbEtM/.TgxGODG5h/Pwdcex0zoiWbeMZkBjKYwsVRha\",\"updated_at\":\"2018-11-02T01:57:01.768Z\"},\"Oy08LTrszHB5tHG6X5PJag\":{\"token\":\"$2a$10$SweL74hllk4L.dprqDYhUO3oqqM1T5x60UobTNEitqAFF9HGD/Yq2\",\"expiry\":1542333445,\"last_token\":\"$2a$10$pyEAd3/M2g.o7rCCv7NI2.aaXppieraR2Pvi0QmWvGYtoh1jmHyou\",\"updated_at\":\"2018-11-02T01:57:25.690Z\"},\"6_-fHLnxsxyhZKl_lAnmyw\":{\"token\":\"$2a$10$0vie0rB3r9lFpyJv0D.NRe0DGqRhFmzDu8BhcRy6t6TMP5lL7zsVW\",\"expiry\":1542333461,\"last_token\":\"$2a$10$NUkSvVs6U4.6S.rzKSze3OC5JcjkQCLEgHo9k8HVUJofQijMbc8Qi\",\"updated_at\":\"2018-11-02T01:57:41.633Z\"},\"FcTvnH5fIJ-T4Qodz4x7DA\":{\"token\":\"$2a$10$KIfb58AzaBiGub/y94XQw.XiRidjy6SLkYgsw47nMHLTEkAanF6fu\",\"expiry\":1542333462,\"last_token\":\"$2a$10$P7R2AWr/kI/NjY0B5ghEBOsS5SAoFgE3ZHXEmD9LsOgDkJwKA6FIW\",\"updated_at\":\"2018-11-02T01:57:42.878Z\"},\"yTK5Vui5qfcez2yztFyK9g\":{\"token\":\"$2a$10$nc9zHweUhFoA0tR0nrda3.5wp7oWBBmuq85MwCcXhNnjkVt4ALY16\",\"expiry\":1542333471}}"], ["updated_at", "2018-11-02 01:57:51.325376"], ["id", 2]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (9.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUserRole Load (0.1ms)[0m  [1m[34mSELECT  "user_roles".* FROM "user_roles" WHERE "user_roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUserRole Load (0.1ms)[0m  [1m[34mSELECT  "user_roles".* FROM "user_roles" WHERE "user_roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"HM3PhgzsxtAeOgG7_GuVbg\":{\"token\":\"$2a$10$NgLvUJGu5z67cLP.9.Huru4dDqIVO4UOfD5qCSDeYnaqk4eAeVjYG\",\"expiry\":1542332623,\"last_token\":\"$2a$10$V2mEMdaWR2AsWyteU5Of6.8oYA7Iv9F86GcwICb5gIxqilTsma5VO\",\"updated_at\":\"2018-11-02T01:43:43.591Z\"},\"lTFiQ9GKdiu1sCxF4Bx5NA\":{\"token\":\"$2a$10$8bR2AnyTHHzZjOmYIHRvjez9Kuq.lF8u.fT9bTZb43/jXokOzlcQm\",\"expiry\":1542332642,\"last_token\":\"$2a$10$B8ySUSJtnsE2sJd/tCQLZuHOnzH7kAazHMEtJ3RUGv9Ceb6BRnbrO\",\"updated_at\":\"2018-11-02T01:44:02.191Z\"},\"QFfiqEcVHNaskdHdYOuQvQ\":{\"token\":\"$2a$10$2Wxn2rG3EKF2.jeStSN0Kec0wbVDkCdVxWu/mWzxzGuPOPzdxGzaG\",\"expiry\":1542332702,\"last_token\":\"$2a$10$heV/ITGRXUexRXlvxw6mb.nCC7Isw9v80xb.Ukf.nVv3AaGhvjZNO\",\"updated_at\":\"2018-11-02T01:45:02.818Z\"},\"eIXWKmHQA0GuCJiO-IXWKQ\":{\"token\":\"$2a$10$smT7i02Do0WWhEgT7pZ20.Joy8TB310MvaZ629ddHSUIacsxEGZqi\",\"expiry\":1542333092,\"last_token\":\"$2a$10$.a3Wk9dUSSI.Dwpb5AV.AOFESGJ5uR2NviXjsVn8K0L6dL53Vpb3e\",\"updated_at\":\"2018-11-02T01:51:32.831Z\"},\"bpwwv79-EabPlcZqR7Nnmg\":{\"token\":\"$2a$10$9kqZuqok.xb8kJaw2MDshemsOWvhyNN5yD/Mnn4KPnEseLxFyoB/m\",\"expiry\":1542333421,\"last_token\":\"$2a$10$imCkMmCF8QFbEtM/.TgxGODG5h/Pwdcex0zoiWbeMZkBjKYwsVRha\",\"updated_at\":\"2018-11-02T01:57:01.768Z\"},\"Oy08LTrszHB5tHG6X5PJag\":{\"token\":\"$2a$10$SweL74hllk4L.dprqDYhUO3oqqM1T5x60UobTNEitqAFF9HGD/Yq2\",\"expiry\":1542333445,\"last_token\":\"$2a$10$pyEAd3/M2g.o7rCCv7NI2.aaXppieraR2Pvi0QmWvGYtoh1jmHyou\",\"updated_at\":\"2018-11-02T01:57:25.690Z\"},\"6_-fHLnxsxyhZKl_lAnmyw\":{\"token\":\"$2a$10$0vie0rB3r9lFpyJv0D.NRe0DGqRhFmzDu8BhcRy6t6TMP5lL7zsVW\",\"expiry\":1542333461,\"last_token\":\"$2a$10$NUkSvVs6U4.6S.rzKSze3OC5JcjkQCLEgHo9k8HVUJofQijMbc8Qi\",\"updated_at\":\"2018-11-02T01:57:41.633Z\"},\"FcTvnH5fIJ-T4Qodz4x7DA\":{\"token\":\"$2a$10$KIfb58AzaBiGub/y94XQw.XiRidjy6SLkYgsw47nMHLTEkAanF6fu\",\"expiry\":1542333462,\"last_token\":\"$2a$10$P7R2AWr/kI/NjY0B5ghEBOsS5SAoFgE3ZHXEmD9LsOgDkJwKA6FIW\",\"updated_at\":\"2018-11-02T01:57:42.878Z\"},\"yTK5Vui5qfcez2yztFyK9g\":{\"token\":\"$2a$10$HTS.TTZ6Ol9CpAHOejwc1e3xEgSR20nysTgCubG.ExqDsxgE2mph2\",\"expiry\":1542333471,\"last_token\":\"$2a$10$nc9zHweUhFoA0tR0nrda3.5wp7oWBBmuq85MwCcXhNnjkVt4ALY16\",\"updated_at\":\"2018-11-02T01:57:51.343Z\"}}"], ["updated_at", "2018-11-02 01:57:51.410834"], ["id", 2]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (23.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 319ms (Views: 0.2ms | ActiveRecord: 34.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-02 07:45:04 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.1) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to AddDeviseToUsers (20181102020020)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "users" ADD "email" varchar DEFAULT '' NOT NULL[0m
+  ↳ db/migrate/20181102020020_add_devise_to_users.rb:7
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to AddDeviseToUsers (20181102020020)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181102020020"]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (19.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateActiveAdminComments (20181102020021)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20181102020021_create_active_admin_comments.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "active_admin_comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "namespace" varchar, "body" text, "resource_type" varchar, "resource_id" integer, "author_type" varchar, "author_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181102020021_create_active_admin_comments.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_resource_type_and_resource_id" ON "active_admin_comments" ("resource_type", "resource_id")[0m
+  ↳ db/migrate/20181102020021_create_active_admin_comments.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_author_type_and_author_id" ON "active_admin_comments" ("author_type", "author_id")[0m
+  ↳ db/migrate/20181102020021_create_active_admin_comments.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_namespace" ON "active_admin_comments" ("namespace")[0m
+  ↳ db/migrate/20181102020021_create_active_admin_comments.rb:10
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181102020021"]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (19.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/bin/rake:23
+Started GET "/" for 127.0.0.1 at 2018-11-02 07:46:40 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (3.6ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admi" for 127.0.0.1 at 2018-11-02 07:46:45 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/admi"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/admin" for 127.0.0.1 at 2018-11-02 07:46:48 +0530
+Processing by Admin::DashboardController#index as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+activesupport (5.2.1) lib/active_support/core_ext/class/attribute.rb:124:in `block (2 levels) in class_attribute'
+devise_token_auth (1.0.0) app/controllers/devise_token_auth/concerns/set_user_by_token.rb:41:in `set_user_by_token'
+devise_token_auth (1.0.0) lib/devise_token_auth/controllers/helpers.rb:134:in `current_user'
+devise_token_auth (1.0.0) lib/devise_token_auth/controllers/helpers.rb:124:in `authenticate_user!'
+activeadmin (1.3.1) lib/active_admin/base_controller.rb:39:in `authenticate_active_admin_user'
+activesupport (5.2.1) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.1) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.1) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-02 07:47:03 +0530
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/devise/shared/_links.erb (1.7ms)
+  Rendered /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (30.5ms)
+Completed 500 Internal Server Error in 212ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (The asset "active_admin.css" is not present in the asset pipeline.):
+     6:   <title><%= [@page_title, render_or_call_method_or_proc_on(self, ActiveAdmin.application.site_title)].compact.join(" | ") %></title>
+     7: 
+     8:   <% ActiveAdmin.application.stylesheets.each do |style, options| %>
+     9:     <%= stylesheet_link_tag style, options %>
+    10:   <% end %>
+    11:   <% ActiveAdmin.application.javascripts.each do |path| %>
+    12:     <%= javascript_include_tag path %>
+  
+sprockets-rails (3.2.1) lib/sprockets/rails/helper.rb:83:in `compute_asset_path'
+actionview (5.2.1) lib/action_view/helpers/asset_url_helper.rb:200:in `asset_path'
+actionview (5.2.1) lib/action_view/helpers/asset_url_helper.rb:345:in `stylesheet_path'
+actionview (5.2.1) lib/action_view/helpers/asset_tag_helper.rb:143:in `block in stylesheet_link_tag'
+actionview (5.2.1) lib/action_view/helpers/asset_tag_helper.rb:142:in `map'
+actionview (5.2.1) lib/action_view/helpers/asset_tag_helper.rb:142:in `stylesheet_link_tag'
+sprockets-rails (3.2.1) lib/sprockets/rails/helper.rb:185:in `block in stylesheet_link_tag'
+sprockets-rails (3.2.1) lib/sprockets/rails/helper.rb:183:in `map'
+sprockets-rails (3.2.1) lib/sprockets/rails/helper.rb:183:in `stylesheet_link_tag'
+activeadmin (1.3.1) app/views/layouts/active_admin_logged_out.html.erb:9:in `block in __home_pixy__rbenv_versions_______lib_ruby_gems_______gems_activeadmin_______app_views_layouts_active_admin_logged_out_html_erb__3609717592407636723_69949046342000'
+activeadmin (1.3.1) app/views/layouts/active_admin_logged_out.html.erb:8:in `each'
+activeadmin (1.3.1) app/views/layouts/active_admin_logged_out.html.erb:8:in `__home_pixy__rbenv_versions_______lib_ruby_gems_______gems_activeadmin_______app_views_layouts_active_admin_logged_out_html_erb__3609717592407636723_69949046342000'
+actionview (5.2.1) lib/action_view/template.rb:159:in `block in render'
+activesupport (5.2.1) lib/active_support/notifications.rb:170:in `instrument'
+actionview (5.2.1) lib/action_view/template.rb:354:in `instrument_render_template'
+actionview (5.2.1) lib/action_view/template.rb:157:in `render'
+actionview (5.2.1) lib/action_view/renderer/template_renderer.rb:66:in `render_with_layout'
+actionview (5.2.1) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+actionview (5.2.1) lib/action_view/renderer/template_renderer.rb:16:in `render'
+actionview (5.2.1) lib/action_view/renderer/renderer.rb:44:in `render_template'
+actionview (5.2.1) lib/action_view/renderer/renderer.rb:25:in `render'
+actionview (5.2.1) lib/action_view/rendering.rb:103:in `_render_template'
+actionpack (5.2.1) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+actionview (5.2.1) lib/action_view/rendering.rb:84:in `render_to_body'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+actionpack (5.2.1) lib/action_controller/metal/renderers.rb:142:in `render_to_body'
+actionpack (5.2.1) lib/abstract_controller/rendering.rb:25:in `render'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:36:in `render'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:46:in `block (2 levels) in render'
+activesupport (5.2.1) lib/active_support/core_ext/benchmark.rb:14:in `block in ms'
+/home/pixy/.rbenv/versions/2.5.1/lib/ruby/2.5.0/benchmark.rb:308:in `realtime'
+activesupport (5.2.1) lib/active_support/core_ext/benchmark.rb:14:in `ms'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:46:in `block in render'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:31:in `cleanup_view_runtime'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:45:in `render'
+responders (2.4.0) lib/action_controller/responder.rb:238:in `default_render'
+responders (2.4.0) lib/action_controller/responder.rb:170:in `to_html'
+responders (2.4.0) lib/action_controller/responder.rb:163:in `respond'
+responders (2.4.0) lib/action_controller/responder.rb:156:in `call'
+responders (2.4.0) lib/action_controller/respond_with.rb:211:in `respond_with'
+devise (4.5.0) app/controllers/devise/sessions_controller.rb:14:in `new'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (5.2.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/admin" for 127.0.0.1 at 2018-11-02 07:47:54 +0530
+Processing by Admin::DashboardController#index as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+activesupport (5.2.1) lib/active_support/core_ext/class/attribute.rb:124:in `block (2 levels) in class_attribute'
+devise_token_auth (1.0.0) app/controllers/devise_token_auth/concerns/set_user_by_token.rb:41:in `set_user_by_token'
+devise_token_auth (1.0.0) lib/devise_token_auth/controllers/helpers.rb:134:in `current_user'
+devise_token_auth (1.0.0) lib/devise_token_auth/controllers/helpers.rb:124:in `authenticate_user!'
+activeadmin (1.3.1) lib/active_admin/base_controller.rb:39:in `authenticate_active_admin_user'
+activesupport (5.2.1) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.1) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.1) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/admin" for 127.0.0.1 at 2018-11-02 07:51:55 +0530
+Processing by Admin::DashboardController#index as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+activesupport (5.2.1) lib/active_support/core_ext/class/attribute.rb:124:in `block (2 levels) in class_attribute'
+devise_token_auth (1.0.0) app/controllers/devise_token_auth/concerns/set_user_by_token.rb:41:in `set_user_by_token'
+devise_token_auth (1.0.0) lib/devise_token_auth/controllers/helpers.rb:134:in `current_user'
+devise_token_auth (1.0.0) lib/devise_token_auth/controllers/helpers.rb:124:in `authenticate_user!'
+activeadmin (1.3.1) lib/active_admin/base_controller.rb:39:in `authenticate_active_admin_user'
+activesupport (5.2.1) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.1) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.1) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-02 07:52:02 +0530
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/devise/shared/_links.erb (1.5ms)
+  Rendered /home/pixy/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (14.1ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (The asset "active_admin.css" is not present in the asset pipeline.):
+     6:   <title><%= [@page_title, render_or_call_method_or_proc_on(self, ActiveAdmin.application.site_title)].compact.join(" | ") %></title>
+     7: 
+     8:   <% ActiveAdmin.application.stylesheets.each do |style, options| %>
+     9:     <%= stylesheet_link_tag style, options %>
+    10:   <% end %>
+    11:   <% ActiveAdmin.application.javascripts.each do |path| %>
+    12:     <%= javascript_include_tag path %>
+  
+sprockets-rails (3.2.1) lib/sprockets/rails/helper.rb:83:in `compute_asset_path'
+actionview (5.2.1) lib/action_view/helpers/asset_url_helper.rb:200:in `asset_path'
+actionview (5.2.1) lib/action_view/helpers/asset_url_helper.rb:345:in `stylesheet_path'
+actionview (5.2.1) lib/action_view/helpers/asset_tag_helper.rb:143:in `block in stylesheet_link_tag'
+actionview (5.2.1) lib/action_view/helpers/asset_tag_helper.rb:142:in `map'
+actionview (5.2.1) lib/action_view/helpers/asset_tag_helper.rb:142:in `stylesheet_link_tag'
+sprockets-rails (3.2.1) lib/sprockets/rails/helper.rb:185:in `block in stylesheet_link_tag'
+sprockets-rails (3.2.1) lib/sprockets/rails/helper.rb:183:in `map'
+sprockets-rails (3.2.1) lib/sprockets/rails/helper.rb:183:in `stylesheet_link_tag'
+activeadmin (1.3.1) app/views/layouts/active_admin_logged_out.html.erb:9:in `block in __home_pixy__rbenv_versions_______lib_ruby_gems_______gems_activeadmin_______app_views_layouts_active_admin_logged_out_html_erb__3609717592407636723_69949012865640'
+activeadmin (1.3.1) app/views/layouts/active_admin_logged_out.html.erb:8:in `each'
+activeadmin (1.3.1) app/views/layouts/active_admin_logged_out.html.erb:8:in `__home_pixy__rbenv_versions_______lib_ruby_gems_______gems_activeadmin_______app_views_layouts_active_admin_logged_out_html_erb__3609717592407636723_69949012865640'
+actionview (5.2.1) lib/action_view/template.rb:159:in `block in render'
+activesupport (5.2.1) lib/active_support/notifications.rb:170:in `instrument'
+actionview (5.2.1) lib/action_view/template.rb:354:in `instrument_render_template'
+actionview (5.2.1) lib/action_view/template.rb:157:in `render'
+actionview (5.2.1) lib/action_view/renderer/template_renderer.rb:66:in `render_with_layout'
+actionview (5.2.1) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+actionview (5.2.1) lib/action_view/renderer/template_renderer.rb:16:in `render'
+actionview (5.2.1) lib/action_view/renderer/renderer.rb:44:in `render_template'
+actionview (5.2.1) lib/action_view/renderer/renderer.rb:25:in `render'
+actionview (5.2.1) lib/action_view/rendering.rb:103:in `_render_template'
+actionpack (5.2.1) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+actionview (5.2.1) lib/action_view/rendering.rb:84:in `render_to_body'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+actionpack (5.2.1) lib/action_controller/metal/renderers.rb:142:in `render_to_body'
+actionpack (5.2.1) lib/abstract_controller/rendering.rb:25:in `render'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:36:in `render'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:46:in `block (2 levels) in render'
+activesupport (5.2.1) lib/active_support/core_ext/benchmark.rb:14:in `block in ms'
+/home/pixy/.rbenv/versions/2.5.1/lib/ruby/2.5.0/benchmark.rb:308:in `realtime'
+activesupport (5.2.1) lib/active_support/core_ext/benchmark.rb:14:in `ms'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:46:in `block in render'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:31:in `cleanup_view_runtime'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:45:in `render'
+responders (2.4.0) lib/action_controller/responder.rb:238:in `default_render'
+responders (2.4.0) lib/action_controller/responder.rb:170:in `to_html'
+responders (2.4.0) lib/action_controller/responder.rb:163:in `respond'
+responders (2.4.0) lib/action_controller/responder.rb:156:in `call'
+responders (2.4.0) lib/action_controller/respond_with.rb:211:in `respond_with'
+devise (4.5.0) app/controllers/devise/sessions_controller.rb:14:in `new'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (5.2.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'

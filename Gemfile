@@ -48,6 +48,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 # ActiveAdmin
 gem 'activeadmin'
+gem 'cancancan', '~> 1.15'
 gem 'devise'
 gem 'devise_token_auth'
 gem 'inherited_resources', git: 'https://github.com/activeadmin/inherited_resources'

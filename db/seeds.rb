@@ -7,9 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 if Rails.env.development?
   #  Uncomment this section and add user Roles That you want
-  UserRole.create!([
-    { role_name: 'Admin', slug: 'admin' },
-    { role_name: 'User', slug: 'user' }
-  ])
-  User.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password', user_role_id: 1) if Rails.env.development?
+  User.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password', user_role: "admin") if Rails.env.development?
 end

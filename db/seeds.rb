@@ -11,4 +11,5 @@ if Rails.env.development?
     { role_name: 'Admin', slug: 'admin' },
     { role_name: 'User', slug: 'user' }
   ])
+  User.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password', user_role_id: 1) if Rails.env.development?
 end

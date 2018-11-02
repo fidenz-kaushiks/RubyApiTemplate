@@ -60,3 +60,6 @@ yarn-debug.log*
 # Ignore uploaded files in development
 /storage/*
 !/storage/.keep
+
+# Remove .idea files from project (specified for JetBrains RubyMine)
+**.idea/**

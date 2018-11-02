@@ -29354,3 +29354,2048 @@ Processing by ActiveAdmin::Devise::SessionsController#new as HTML
 Completed 200 OK in 298ms (Views: 268.6ms | ActiveRecord: 0.6ms)
 
 
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to DeviseTokenAuthCreateUsers (20181102010330)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "provider" varchar DEFAULT 'email' NOT NULL, "uid" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "allow_password_change" boolean DEFAULT 0, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "confirmation_token" varchar, "confirmed_at" datetime, "confirmation_sent_at" datetime, "unconfirmed_email" varchar, "name" varchar, "nickname" varchar, "image" varchar, "email" varchar, "user_role" integer DEFAULT 0 NOT NULL, "tokens" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181102010330_devise_token_auth_create_users.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/migrate/20181102010330_devise_token_auth_create_users.rb:51
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_uid_and_provider" ON "users" ("uid", "provider")[0m
+  ↳ db/migrate/20181102010330_devise_token_auth_create_users.rb:52
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/migrate/20181102010330_devise_token_auth_create_users.rb:53
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  ↳ db/migrate/20181102010330_devise_token_auth_create_users.rb:54
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181102010330"]]
+  ↳ bin/rails:9
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to AddDeviseToUsers (20181102041647)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181102041647"]]
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateActiveAdminComments (20181102041649)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "active_admin_comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "namespace" varchar, "body" text, "resource_type" varchar, "resource_id" integer, "author_type" varchar, "author_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181102041649_create_active_admin_comments.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_resource_type_and_resource_id" ON "active_admin_comments" ("resource_type", "resource_id")[0m
+  ↳ db/migrate/20181102041649_create_active_admin_comments.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_author_type_and_author_id" ON "active_admin_comments" ("author_type", "author_id")[0m
+  ↳ db/migrate/20181102041649_create_active_admin_comments.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_namespace" ON "active_admin_comments" ("namespace")[0m
+  ↳ db/migrate/20181102041649_create_active_admin_comments.rb:10
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181102041649"]]
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-11-02 06:21:44.834086"], ["updated_at", "2018-11-02 06:21:44.834086"]]
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (2.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_admin_comments"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "active_admin_comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "namespace" varchar, "body" text, "resource_type" varchar, "resource_id" integer, "author_type" varchar, "author_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_author_type_and_author_id" ON "active_admin_comments" ("author_type", "author_id")[0m
+  ↳ db/schema.rb:15
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_namespace" ON "active_admin_comments" ("namespace")[0m
+  ↳ db/schema.rb:15
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_resource_type_and_resource_id" ON "active_admin_comments" ("resource_type", "resource_id")[0m
+  ↳ db/schema.rb:15
+  [1m[35m (1.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  ↳ db/schema.rb:29
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "provider" varchar DEFAULT 'email' NOT NULL, "uid" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "allow_password_change" boolean DEFAULT 0, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "confirmation_token" varchar, "confirmed_at" datetime, "confirmation_sent_at" datetime, "unconfirmed_email" varchar, "name" varchar, "nickname" varchar, "image" varchar, "email" varchar, "user_role" integer DEFAULT 0 NOT NULL, "tokens" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:29
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  ↳ db/schema.rb:29
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/schema.rb:29
+  [1m[35m (11.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/schema.rb:29
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_uid_and_provider" ON "users" ("uid", "provider")[0m
+  ↳ db/schema.rb:29
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_admin_comments"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "active_admin_comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "namespace" varchar, "body" text, "resource_type" varchar, "resource_id" integer, "author_type" varchar, "author_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_author_type_and_author_id" ON "active_admin_comments" ("author_type", "author_id")[0m
+  ↳ db/schema.rb:15
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_namespace" ON "active_admin_comments" ("namespace")[0m
+  ↳ db/schema.rb:15
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_resource_type_and_resource_id" ON "active_admin_comments" ("resource_type", "resource_id")[0m
+  ↳ db/schema.rb:15
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  ↳ db/schema.rb:29
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "provider" varchar DEFAULT 'email' NOT NULL, "uid" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "allow_password_change" boolean DEFAULT 0, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "confirmation_token" varchar, "confirmed_at" datetime, "confirmation_sent_at" datetime, "unconfirmed_email" varchar, "name" varchar, "nickname" varchar, "image" varchar, "email" varchar, "user_role" integer DEFAULT 0 NOT NULL, "tokens" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:29
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  ↳ db/schema.rb:29
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/schema.rb:29
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/schema.rb:29
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_uid_and_provider" ON "users" ("uid", "provider")[0m
+  ↳ db/schema.rb:29
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20181102041649)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20181102010330),
+(20181102041647);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (1.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-11-02 06:21:52.234080"], ["updated_at", "2018-11-02 06:21:52.234080"]]
+  ↳ db/schema.rb:13
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2018-11-02 06:21:52.247458"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."provider" = ? LIMIT ?[0m  [["email", "admin@example.com"], ["provider", "email"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "email", "tokens", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["uid", "admin@example.com"], ["encrypted_password", "$2a$11$Y4stikWSEpIhMFfZOtIyJuTn1Uw7R9Q29xSuoZ.8C.7PzLDufMlWO"], ["email", "admin@example.com"], ["tokens", "{}"], ["created_at", "2018-11-02 06:21:52.412520"], ["updated_at", "2018-11-02 06:21:52.412520"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+Started GET "/" for 127.0.0.1 at 2018-11-02 11:52:02 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (18.5ms)
+Completed 200 OK in 74ms (Views: 43.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-11-02 11:52:03 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-11-02 11:54:30 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 12ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-02 11:54:30 +0530
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/devise/shared/_links.erb (3.7ms)
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (99.1ms)
+Completed 200 OK in 6049ms (Views: 6018.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/active_admin-24a716b2dd8e48cff446af15d2c0ca940018bad6568b0b18bf538f5be4923282.css" for 127.0.0.1 at 2018-11-02 11:54:37 +0530
+Started GET "/assets/active_admin-e670a4b09c70a1cf0e546e3cc233273ec00d44a2fe841969cac0562998dbec41.js" for 127.0.0.1 at 2018-11-02 11:54:37 +0530
+Started GET "/assets/active_admin/print-d33387f1de894e330984b5ae4a9ced78490aca3a83277bea0074efdca1859e29.css" for 127.0.0.1 at 2018-11-02 11:54:37 +0530
+Started POST "/admin/login" for 127.0.0.1 at 2018-11-02 11:54:39 +0530
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xlWjLmzXSza/XpAq4gdAcxm7WDbp5SCtj1zWO94BLcXaH3/r7+vVdnM5au8PyOE67IuKgc6oAptAC/t+WE7rMw==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 196ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-11-02 11:54:39 +0530
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb (57.5ms)
+Completed 200 OK in 133ms (Views: 110.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-02 11:54:42 +0530
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb (82.1ms)
+Completed 200 OK in 123ms (Views: 113.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/admin/users/new" for 127.0.0.1 at 2018-11-02 11:54:48 +0530
+Processing by Admin::UsersController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/new.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/new.html.arb (40.8ms)
+Completed 200 OK in 80ms (Views: 71.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/users/new" for 127.0.0.1 at 2018-11-02 11:55:06 +0530
+Processing by Admin::UsersController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/new.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/new.html.arb (50.7ms)
+Completed 200 OK in 132ms (Views: 74.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/admin/users" for 127.0.0.1 at 2018-11-02 11:56:38 +0530
+Processing by Admin::UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XElKGklG9PGttpfXRYRIziVsL4mUQ5cigX9/sRqm0V+vV4f5TRN3GNQoqSn0IPqo1H7IMLAXAPCVOH2Phc+Egw==", "user"=>{"email"=>"sample@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user_role"=>"player"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :user_role
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:33
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."provider" = ? LIMIT ?[0m  [["email", "sample@example.com"], ["provider", "email"], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:33
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "email", "tokens", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["uid", "sample@example.com"], ["encrypted_password", "$2a$11$d6qbm/C1OXpCy3BWjS13juO60eVRR.i2aA2rfVvhpdCeotPJc/CVW"], ["email", "sample@example.com"], ["tokens", "{}"], ["created_at", "2018-11-02 06:26:38.744539"], ["updated_at", "2018-11-02 06:26:38.744539"]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:33
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:33
+Redirected to http://localhost:3000/admin/users/2
+Completed 302 Found in 272ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/admin/users/2" for 127.0.0.1 at 2018-11-02 11:56:38 +0530
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:13
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/show.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "User"], ["resource_id", 2], ["namespace", "admin"]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:13
+  [1m[36mActiveAdmin::Comment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "User"], ["resource_id", 2], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:13
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/show.html.arb (232.1ms)
+Completed 200 OK in 286ms (Views: 271.2ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-11-02 11:56:40 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/admin/users/2/edit" for 127.0.0.1 at 2018-11-02 11:56:57 +0530
+Processing by Admin::UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:25
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:25
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/edit.html.arb (60.4ms)
+Completed 200 OK in 99ms (Views: 93.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-02 11:57:37 +0530
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb (73.4ms)
+Completed 200 OK in 107ms (Views: 102.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/users/2" for 127.0.0.1 at 2018-11-02 11:57:59 +0530
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:13
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/show.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "User"], ["resource_id", 2], ["namespace", "admin"]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:13
+  [1m[36mActiveAdmin::Comment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "User"], ["resource_id", 2], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:13
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/show.html.arb (87.2ms)
+Completed 200 OK in 128ms (Views: 124.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/users/2/edit" for 127.0.0.1 at 2018-11-02 11:58:05 +0530
+Processing by Admin::UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:25
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:25
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/edit.html.arb (54.2ms)
+Completed 200 OK in 93ms (Views: 83.5ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/admin/users/2" for 127.0.0.1 at 2018-11-02 11:58:11 +0530
+Processing by Admin::UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/WdQ7ZUN2MlvyM2/Vn5fOCV51Jj9I4L8arxiIa0QWDsOeZ0OkVhbIBZW80Hn2u1e1GszIdl3FS5++2AfMnkN5w==", "user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user_role"=>"anonymous"}, "commit"=>"Update User", "id"=>"2"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:43
+Unpermitted parameter: :user_role
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:45
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:45
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/edit.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/edit.html.arb (186.4ms)
+Completed 200 OK in 416ms (Views: 217.8ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/admin/users/2" for 127.0.0.1 at 2018-11-02 11:58:27 +0530
+Processing by Admin::UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kPFCpM6An1G0a9r2PcGaz5vqz3eSUtmcl6lhFas0/E9j749HytUcuM315AiMZSipavgozrYGTk6D7mMrNF2pkw==", "user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user_role"=>"anonymous"}, "commit"=>"Update User", "id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:43
+Unpermitted parameter: :user_role
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:45
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "email" = ?, "encrypted_password" = ?, "uid" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["email", "admin@example.com"], ["encrypted_password", "$2a$11$yvGV.bVLV9Pnh/5PVNjY/.rSn7uC2ixC4XzQ5M2gvRGYYMp.16p22"], ["uid", "admin@example.com"], ["updated_at", "2018-11-02 06:28:27.239877"], ["id", 2]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:45
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:45
+Completed 500 Internal Server Error in 142ms (ActiveRecord: 1.2ms)
+
+
+  
+ActiveRecord::RecordNotUnique (SQLite3::ConstraintException: UNIQUE constraint failed: users.uid, users.provider: UPDATE "users" SET "email" = ?, "encrypted_password" = ?, "uid" = ?, "updated_at" = ? WHERE "users"."id" = ?):
+  
+sqlite3 (1.3.13) lib/sqlite3/statement.rb:108:in `step'
+sqlite3 (1.3.13) lib/sqlite3/statement.rb:108:in `block in each'
+sqlite3 (1.3.13) lib/sqlite3/statement.rb:107:in `loop'
+sqlite3 (1.3.13) lib/sqlite3/statement.rb:107:in `each'
+activerecord (5.2.1) lib/active_record/connection_adapters/sqlite3_adapter.rb:222:in `to_a'
+activerecord (5.2.1) lib/active_record/connection_adapters/sqlite3_adapter.rb:222:in `block (2 levels) in exec_query'
+activesupport (5.2.1) lib/active_support/dependencies/interlock.rb:48:in `block in permit_concurrent_loads'
+activesupport (5.2.1) lib/active_support/concurrency/share_lock.rb:187:in `yield_shares'
+activesupport (5.2.1) lib/active_support/dependencies/interlock.rb:47:in `permit_concurrent_loads'
+activerecord (5.2.1) lib/active_record/connection_adapters/sqlite3_adapter.rb:213:in `block in exec_query'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:579:in `block (2 levels) in log'
+/Users/Choota/.rbenv/versions/2.5.3/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:578:in `block in log'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract_adapter.rb:569:in `log'
+activerecord (5.2.1) lib/active_record/connection_adapters/sqlite3_adapter.rb:212:in `exec_query'
+activerecord (5.2.1) lib/active_record/connection_adapters/sqlite3_adapter.rb:243:in `exec_delete'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/database_statements.rb:157:in `update'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/query_cache.rb:21:in `update'
+activerecord (5.2.1) lib/active_record/persistence.rb:197:in `_update_record'
+activerecord (5.2.1) lib/active_record/persistence.rb:695:in `_update_row'
+activerecord (5.2.1) lib/active_record/locking/optimistic.rb:80:in `_update_row'
+activerecord (5.2.1) lib/active_record/persistence.rb:718:in `_update_record'
+activerecord (5.2.1) lib/active_record/attribute_methods/dirty.rb:133:in `_update_record'
+activerecord (5.2.1) lib/active_record/callbacks.rb:350:in `block in _update_record'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+activesupport (5.2.1) lib/active_support/callbacks.rb:816:in `_run_update_callbacks'
+activerecord (5.2.1) lib/active_record/callbacks.rb:350:in `_update_record'
+activerecord (5.2.1) lib/active_record/timestamp.rb:114:in `_update_record'
+activerecord (5.2.1) lib/active_record/persistence.rb:704:in `create_or_update'
+activerecord (5.2.1) lib/active_record/callbacks.rb:342:in `block in create_or_update'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+activesupport (5.2.1) lib/active_support/callbacks.rb:816:in `_run_save_callbacks'
+activerecord (5.2.1) lib/active_record/callbacks.rb:342:in `create_or_update'
+activerecord (5.2.1) lib/active_record/persistence.rb:275:in `save'
+activerecord (5.2.1) lib/active_record/validations.rb:46:in `save'
+activerecord (5.2.1) lib/active_record/transactions.rb:310:in `block (2 levels) in save'
+activerecord (5.2.1) lib/active_record/transactions.rb:387:in `block in with_transaction_returning_status'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/database_statements.rb:254:in `block in transaction'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/transaction.rb:239:in `block in within_new_transaction'
+/Users/Choota/.rbenv/versions/2.5.3/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/transaction.rb:236:in `within_new_transaction'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/database_statements.rb:254:in `transaction'
+activerecord (5.2.1) lib/active_record/transactions.rb:212:in `transaction'
+activerecord (5.2.1) lib/active_record/transactions.rb:385:in `with_transaction_returning_status'
+activerecord (5.2.1) lib/active_record/transactions.rb:310:in `block in save'
+activerecord (5.2.1) lib/active_record/transactions.rb:325:in `rollback_active_record_state!'
+activerecord (5.2.1) lib/active_record/transactions.rb:309:in `save'
+activerecord (5.2.1) lib/active_record/suppressor.rb:44:in `save'
+activeadmin (1.3.1) lib/active_admin/resource_controller/data_access.rb:155:in `block in save_resource'
+activesupport (5.2.1) lib/active_support/core_ext/object/try.rb:19:in `public_send'
+activesupport (5.2.1) lib/active_support/core_ext/object/try.rb:19:in `try!'
+activesupport (5.2.1) lib/active_support/core_ext/object/try.rb:8:in `try'
+activeadmin (1.3.1) lib/active_admin/callbacks.rb:79:in `block (2 levels) in define_active_admin_callbacks'
+activeadmin (1.3.1) lib/active_admin/resource_controller/data_access.rb:154:in `save_resource'
+activeadmin (1.3.1) lib/active_admin/resource_controller/data_access.rb:173:in `block in update_resource'
+activesupport (5.2.1) lib/active_support/core_ext/object/try.rb:19:in `public_send'
+activesupport (5.2.1) lib/active_support/core_ext/object/try.rb:19:in `try!'
+activesupport (5.2.1) lib/active_support/core_ext/object/try.rb:8:in `try'
+activeadmin (1.3.1) lib/active_admin/callbacks.rb:79:in `block (2 levels) in define_active_admin_callbacks'
+activeadmin (1.3.1) lib/active_admin/resource_controller/data_access.rb:172:in `update_resource'
+/Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:45:in `update'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-11-02 11:58:28 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-02 11:58:47 +0530
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb (65.0ms)
+Completed 200 OK in 94ms (Views: 90.5ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/admin/users/2" for 127.0.0.1 at 2018-11-02 11:58:51 +0530
+Processing by Admin::UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"54uCjqtENpLXftfIbdFEkokExrl0dEyyvMvEZj1ABUIUlU9trxG1e67g6Tbcdfb0eBYhAFAg22CojMZYoilQng==", "id"=>"2"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:55
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:58
+  [1m[36mUser Destroy (0.9ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 2]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:58
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:58
+Redirected to http://localhost:3000/admin/users
+Completed 302 Found in 80ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-02 11:58:51 +0530
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb (75.7ms)
+Completed 200 OK in 100ms (Views: 95.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admin/users/new" for 127.0.0.1 at 2018-11-02 11:58:53 +0530
+Processing by Admin::UsersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/new.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/new.html.arb (52.4ms)
+Completed 200 OK in 81ms (Views: 78.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/admin/users" for 127.0.0.1 at 2018-11-02 11:59:13 +0530
+Processing by Admin::UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tZCc4LKpxU9gVDkCHfZ0t69bhXjPOTS9zDUhGPoNYFhGjlEDtvxGphnKB/ysUsbRXkliwetto2/YciMmZWQ1hA==", "user"=>{"email"=>"sample@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user_role"=>"anonymous"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :user_role
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:33
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."provider" = ? LIMIT ?[0m  [["email", "sample@example.com"], ["provider", "email"], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:33
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "email", "tokens", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["uid", "sample@example.com"], ["encrypted_password", "$2a$11$2IiXNRh0tpB9QXcqT9S9CexEg0OXBtQ7i0pmzeBlwUngoL.zNnV/G"], ["email", "sample@example.com"], ["tokens", "{}"], ["created_at", "2018-11-02 06:29:13.621703"], ["updated_at", "2018-11-02 06:29:13.621703"]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:33
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:33
+Redirected to http://localhost:3000/admin/users/3
+Completed 302 Found in 205ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/admin/users/3" for 127.0.0.1 at 2018-11-02 11:59:13 +0530
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:13
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/show.html.arb
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "User"], ["resource_id", 3], ["namespace", "admin"]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:13
+  [1m[36mActiveAdmin::Comment Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "User"], ["resource_id", 3], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:13
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/show.html.arb (204.3ms)
+Completed 200 OK in 317ms (Views: 295.6ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-11-02 11:59:15 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/admin/users/3" for 127.0.0.1 at 2018-11-02 12:01:19 +0530
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:13
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/show.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "User"], ["resource_id", 3], ["namespace", "admin"]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:13
+  [1m[36mActiveAdmin::Comment Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "User"], ["resource_id", 3], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:13
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/show.html.arb (94.9ms)
+Completed 200 OK in 155ms (Views: 118.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-11-02 12:01:21 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-02 12:01:54 +0530
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb (652.3ms)
+Completed 200 OK in 744ms (Views: 676.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/admin/users/new" for 127.0.0.1 at 2018-11-02 12:02:07 +0530
+Processing by Admin::UsersController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/new.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/new.html.arb (62.1ms)
+Completed 200 OK in 93ms (Views: 88.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/admin/users" for 127.0.0.1 at 2018-11-02 12:02:18 +0530
+Processing by Admin::UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SLUwX17h49fXGqAt2WsSMGPJJzVAf7aARal2mv5T5CO7q/28WrRgPq6EntNoz6BWktvAjGQrIVJR7nSkYTqx/w==", "user"=>{"email"=>"aaaaa@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user_role"=>"player"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :user_role
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:33
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."provider" = ? LIMIT ?[0m  [["email", "aaaaa@example.com"], ["provider", "email"], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:33
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:33
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/new.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/new.html.arb (134.0ms)
+Completed 200 OK in 379ms (Views: 180.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-11-02 12:02:20 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/admin/users" for 127.0.0.1 at 2018-11-02 12:02:58 +0530
+Processing by Admin::UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zaaAnev/9P4EM1lKd9GmU8BHhk6DeSwN+t1sudLq9s0+uE1+76p3F32tZ7TGdRQ1MVVh96ctu9/umm6HTYOjEQ==", "user"=>{"email"=>"saman@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user_role"=>"merchant"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :user_role
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:33
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."provider" = ? LIMIT ?[0m  [["email", "saman@mail.com"], ["provider", "email"], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:33
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "email", "tokens", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["uid", "saman@mail.com"], ["encrypted_password", "$2a$11$YGVT./rwbhiFvkAxQIe3kOAspPLI9bNe.4fcsbobdvH7GLgIh4BGK"], ["email", "saman@mail.com"], ["tokens", "{}"], ["created_at", "2018-11-02 06:32:58.485216"], ["updated_at", "2018-11-02 06:32:58.485216"]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:33
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:33
+Redirected to http://localhost:3000/admin/users/4
+Completed 302 Found in 230ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/admin/users/4" for 127.0.0.1 at 2018-11-02 12:02:58 +0530
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:13
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/show.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/show.html.arb (53.8ms)
+Completed 200 OK in 119ms (Views: 96.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-11-02 12:02:59 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-02 12:03:09 +0530
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb (94.8ms)
+Completed 200 OK in 127ms (Views: 123.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-02 12:44:15 +0530
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb (87.1ms)
+Completed 200 OK in 163ms (Views: 109.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admin/users/new" for 127.0.0.1 at 2018-11-02 12:44:27 +0530
+Processing by Admin::UsersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/new.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/new.html.arb (47.3ms)
+Completed 500 Internal Server Error in 76ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant Model):
+    1: insert_tag renderer_for(:new)
+  
+app/admin/users.rb:27:in `block (3 levels) in <main>'
+app/admin/users.rb:23:in `block (2 levels) in <main>'
+Started GET "/admin/users/new" for 127.0.0.1 at 2018-11-02 12:44:42 +0530
+Processing by Admin::UsersController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/new.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/new.html.arb (50.8ms)
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `user_role' for #<Class:0x00007fe40b579120>
+Did you mean?  user_roles):
+    1: insert_tag renderer_for(:new)
+  
+app/admin/users.rb:27:in `block (3 levels) in <main>'
+app/admin/users.rb:23:in `block (2 levels) in <main>'
+Started GET "/admin/users/new" for 127.0.0.1 at 2018-11-02 12:44:58 +0530
+Processing by Admin::UsersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/new.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/new.html.arb (52.7ms)
+Completed 500 Internal Server Error in 105ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `user_role' for #<Class:0x00007fe40dd44f10>
+Did you mean?  user_roles):
+    1: insert_tag renderer_for(:new)
+  
+app/admin/users.rb:27:in `block (3 levels) in <main>'
+app/admin/users.rb:23:in `block (2 levels) in <main>'
+Started GET "/admin/users/4/edit" for 127.0.0.1 at 2018-11-02 12:45:55 +0530
+Processing by Admin::UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:25
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:25
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/edit.html.arb (220.5ms)
+Completed 500 Internal Server Error in 278ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `user_role' for #<Class:0x00007fe40aea5948>
+Did you mean?  user_roles):
+    1: insert_tag renderer_for(:edit)
+  
+app/admin/users.rb:27:in `block (3 levels) in <main>'
+app/admin/users.rb:23:in `block (2 levels) in <main>'
+Started GET "/admin/users/4/edit" for 127.0.0.1 at 2018-11-02 12:46:03 +0530
+Processing by Admin::UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:25
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:25
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/edit.html.arb (102.7ms)
+Completed 200 OK in 162ms (Views: 126.5ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/admin/users/4" for 127.0.0.1 at 2018-11-02 12:46:12 +0530
+Processing by Admin::UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9hnTi2pcKtT3QfbI+TmSTkEv9sMIVagicdci0j5H+ZYFBx5obgmpPY7fyDZInSAosD0ReiwBP/BlkCDsoS6sSg==", "user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user_role"=>"merchant"}, "commit"=>"Update User", "id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:43
+Unpermitted parameter: :user_role
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:45
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:45
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/edit.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/edit.html.arb (119.7ms)
+Completed 200 OK in 388ms (Views: 174.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/admin/users/4" for 127.0.0.1 at 2018-11-02 12:46:49 +0530
+Processing by Admin::UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9zaz6YW9y9J8/+MSntxvyJbQp/77e/FfkucTe9YkcQgEKH4KgehIOwVh3ewveN2uZ8JAR98vZo2GoBFFSU0k1A==", "user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user_role"=>"admin"}, "commit"=>"Update User", "id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:43
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:45
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:45
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/edit.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/edit.html.arb (114.2ms)
+Completed 200 OK in 358ms (Views: 134.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-02 12:46:52 +0530
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb (74.0ms)
+Completed 200 OK in 104ms (Views: 99.6ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/admin/users/4" for 127.0.0.1 at 2018-11-02 12:46:57 +0530
+Processing by Admin::UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"MEGVa/LW2PV6p4FPojuqarT4KRAHfLgRT6KMlrU4L/7DX1iI9oNbHAM5v7ETnxgMRerOqSMoL8Nb5Y6oKlF6Ig==", "id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:55
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:58
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 4]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:58
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:58
+Redirected to http://localhost:3000/admin/users
+Completed 302 Found in 92ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-02 12:46:57 +0530
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb (82.2ms)
+Completed 200 OK in 111ms (Views: 105.1ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/admin/users/3" for 127.0.0.1 at 2018-11-02 12:46:59 +0530
+Processing by Admin::UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3UWnxUzLaYgqCL8vSYQ9bsWOdCdE5WYk+MCxQQkTWTIuW2omSJ7qYVOWgdH4II8INJyTnmCx8fbsh7N/lnoM7g==", "id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:55
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:58
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:58
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:58
+Redirected to http://localhost:3000/admin/users
+Completed 302 Found in 75ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-02 12:46:59 +0530
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb (75.9ms)
+Completed 200 OK in 105ms (Views: 100.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admin/users/new" for 127.0.0.1 at 2018-11-02 12:47:00 +0530
+Processing by Admin::UsersController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/new.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/new.html.arb (72.7ms)
+Completed 200 OK in 118ms (Views: 114.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/admin/users" for 127.0.0.1 at 2018-11-02 12:47:18 +0530
+Processing by Admin::UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1kcmx86c9mhX8J7D6c6DJa5Ea6M2QhT4YIAIVIXIru4lWeskysl1gS5uoD1YajFDX1aMGhIWgyp0xwpqGqH7Mg==", "user"=>{"email"=>"samankumara@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user_role"=>"anonymous"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:33
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."provider" = ? LIMIT ?[0m  [["email", "samankumara@example.com"], ["provider", "email"], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:33
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "email", "user_role", "tokens", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["uid", "samankumara@example.com"], ["encrypted_password", "$2a$11$fzEi7h4RpDaNHFejpBLD8uyVAnqDwdMub6s5ss3ale/4YO8LxkA92"], ["email", "samankumara@example.com"], ["user_role", 1], ["tokens", "{}"], ["created_at", "2018-11-02 07:17:18.475767"], ["updated_at", "2018-11-02 07:17:18.475767"]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:33
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:33
+Redirected to http://localhost:3000/admin/users/5
+Completed 302 Found in 219ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/admin/users/5" for 127.0.0.1 at 2018-11-02 12:47:18 +0530
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:13
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/show.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/show.html.arb (39.6ms)
+Completed 200 OK in 74ms (Views: 69.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-11-02 12:47:19 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-02 12:47:25 +0530
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb (65.1ms)
+Completed 200 OK in 95ms (Views: 91.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/users/5/edit" for 127.0.0.1 at 2018-11-02 12:47:43 +0530
+Processing by Admin::UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:25
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:25
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/edit.html.arb (62.6ms)
+Completed 200 OK in 103ms (Views: 100.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/admin/users/5" for 127.0.0.1 at 2018-11-02 12:47:49 +0530
+Processing by Admin::UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w1zd5Pd8PcLSNiu2dfhw6Xy86ON5ILYMBOGc60t+9t0wQhAH8ym+K6uoFUjEXMKPja4PWl10Id4Qpp7V1BejAQ==", "user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user_role"=>"merchant"}, "commit"=>"Update User", "id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:43
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:45
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:45
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/edit.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/edit.html.arb (57.2ms)
+Completed 200 OK in 319ms (Views: 100.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-02 12:47:56 +0530
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb (81.2ms)
+Completed 200 OK in 108ms (Views: 104.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/users/new" for 127.0.0.1 at 2018-11-02 12:48:05 +0530
+Processing by Admin::UsersController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/new.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/new.html.arb (50.5ms)
+Completed 200 OK in 79ms (Views: 76.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/users/new" for 127.0.0.1 at 2018-11-02 12:48:16 +0530
+Processing by Admin::UsersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/new.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/new.html.arb (52.5ms)
+Completed 200 OK in 81ms (Views: 78.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/users/new" for 127.0.0.1 at 2018-11-02 12:48:35 +0530
+Processing by Admin::UsersController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/new.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/new.html.arb (44.8ms)
+Completed 200 OK in 82ms (Views: 72.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-02 12:48:41 +0530
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb (86.8ms)
+Completed 200 OK in 112ms (Views: 108.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/users?utf8=%E2%9C%93&q%5Buser_role_equals%5D=admin&commit=Filter&order=id_desc" for 127.0.0.1 at 2018-11-02 12:49:27 +0530
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"user_role_equals"=>"admin"}, "commit"=>"Filter", "order"=>"id_desc"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" WHERE "users"."user_role" = 0 LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" WHERE "users"."user_role" = 0 LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."user_role" = 0[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" WHERE "users"."user_role" = 0 LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_role" = 0 ORDER BY "users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb (95.6ms)
+Completed 200 OK in 136ms (Views: 126.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/users?utf8=%E2%9C%93&order=id_desc" for 127.0.0.1 at 2018-11-02 12:49:31 +0530
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"utf8"=>"✓", "order"=>"id_desc"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb (98.8ms)
+Completed 200 OK in 141ms (Views: 135.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/logout" for 127.0.0.1 at 2018-11-02 12:49:59 +0530
+Processing by ActiveAdmin::Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 26ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-11-02 12:49:59 +0530
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-02 12:49:59 +0530
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/devise/shared/_links.erb (1.7ms)
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (37.4ms)
+Completed 200 OK in 84ms (Views: 81.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2018-11-02 12:50:16 +0530
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7EjOVxyDlYdNaBXyTSPrEpJRDSduAINThrFWEjMAVBx+fTUaIvraaLAGV2+qO13Kl5JfHKhXSizC8VakWFbNYA==", "admin_user"=>{"email"=>"samankumara@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "samankumara@example.com"], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 214ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-11-02 12:50:17 +0530
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb (36.5ms)
+Completed 200 OK in 65ms (Views: 57.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-11-02 12:50:18 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-02 12:50:23 +0530
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb (61.8ms)
+Completed 200 OK in 94ms (Views: 89.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/users?utf8=%E2%9C%93&q%5Buser_role_equals%5D=admin&commit=Filter&order=id_desc" for 127.0.0.1 at 2018-11-02 12:51:02 +0530
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"user_role_equals"=>"admin"}, "commit"=>"Filter", "order"=>"id_desc"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" WHERE "users"."user_role" = 0 LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" WHERE "users"."user_role" = 0 LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."user_role" = 0[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" WHERE "users"."user_role" = 0 LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_role" = 0 ORDER BY "users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb (79.2ms)
+Completed 200 OK in 115ms (Views: 109.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-02 12:51:13 +0530
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb (69.7ms)
+Completed 200 OK in 95ms (Views: 91.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/users/5/edit" for 127.0.0.1 at 2018-11-02 12:51:16 +0530
+Processing by Admin::UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:25
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/edit.html.arb
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:25
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/edit.html.arb (41.3ms)
+Completed 200 OK in 69ms (Views: 65.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-02 12:52:34 +0530
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb (30.4ms)
+Completed 200 OK in 56ms (Views: 50.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-02 12:55:45 +0530
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb (28.6ms)
+Completed 200 OK in 46ms (Views: 44.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-02 12:55:47 +0530
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb (27.3ms)
+Completed 200 OK in 41ms (Views: 38.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-02 12:55:57 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb (475.2ms)
+Completed 200 OK in 528ms (Views: 488.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-02 12:56:14 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb (513.9ms)
+Completed 200 OK in 574ms (Views: 524.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-02 12:56:17 +0530
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb (72.1ms)
+Completed 200 OK in 100ms (Views: 93.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2018-11-02 12:56:19 +0530
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb (21.9ms)
+Completed 200 OK in 36ms (Views: 33.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2018-11-02 12:58:58 +0530
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb (22.2ms)
+Completed 200 OK in 35ms (Views: 32.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/active_admin-24a716b2dd8e48cff446af15d2c0ca940018bad6568b0b18bf538f5be4923282.css" for 127.0.0.1 at 2018-11-02 12:58:58 +0530
+Started GET "/assets/active_admin-e670a4b09c70a1cf0e546e3cc233273ec00d44a2fe841969cac0562998dbec41.js" for 127.0.0.1 at 2018-11-02 12:58:58 +0530
+Started GET "/assets/active_admin/print-d33387f1de894e330984b5ae4a9ced78490aca3a83277bea0074efdca1859e29.css" for 127.0.0.1 at 2018-11-02 12:58:59 +0530
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-11-02 12:58:59 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-11-02 12:59:15 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb (572.1ms)
+Completed 200 OK in 667ms (Views: 591.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-02 13:03:27 +0530
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb (647.8ms)
+Completed 200 OK in 727ms (Views: 662.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-02 13:04:11 +0530
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb (26.0ms)
+Completed 200 OK in 40ms (Views: 37.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-02 13:04:14 +0530
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb (25.9ms)
+Completed 200 OK in 40ms (Views: 37.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-02 13:04:15 +0530
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb (23.9ms)
+Completed 200 OK in 36ms (Views: 33.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-02 13:04:15 +0530
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb (22.5ms)
+Completed 200 OK in 33ms (Views: 31.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-02 13:04:16 +0530
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb (24.7ms)
+Completed 200 OK in 37ms (Views: 34.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-02 13:04:23 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb (509.5ms)
+Completed 200 OK in 574ms (Views: 522.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-02 13:05:21 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 95ms (ActiveRecord: 1.4ms)
+
+
+  
+NameError (undefined local variable or method `add_logout_button_to_menu' for main:Object):
+  
+config/initializers/active_admin.rb:221:in `block (3 levels) in <main>'
+Started GET "/" for 127.0.0.1 at 2018-11-02 13:05:49 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb (449.0ms)
+Completed 200 OK in 503ms (Views: 462.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-11-02 13:05:52 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-11-02 13:06:14 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb (493.8ms)
+Completed 200 OK in 548ms (Views: 504.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admin/logout" for 127.0.0.1 at 2018-11-02 13:06:17 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/admin/logout"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-02 13:06:38 +0530
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/admin
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-11-02 13:06:38 +0530
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb (31.2ms)
+Completed 200 OK in 55ms (Views: 50.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/signout" for 127.0.0.1 at 2018-11-02 13:06:45 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/admin/signout"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/admin/logout" for 127.0.0.1 at 2018-11-02 13:06:52 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/admin/logout"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-11-02 13:07:14 +0530
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb (32.3ms)
+Completed 200 OK in 51ms (Views: 47.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/logout" for 127.0.0.1 at 2018-11-02 13:08:00 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by ActiveAdmin::Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 52ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-11-02 13:08:00 +0530
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-02 13:08:00 +0530
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/devise/shared/_links.erb (1.3ms)
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (62.2ms)
+Completed 200 OK in 717ms (Views: 715.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-02 13:08:40 +0530
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-02 13:08:40 +0530
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/devise/shared/_links.erb (1.4ms)
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (31.4ms)
+Completed 200 OK in 80ms (Views: 77.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-02 13:10:16 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/devise/shared/_links.erb (2.2ms)
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (45.8ms)
+Completed 200 OK in 667ms (Views: 606.6ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2018-11-02 13:10:19 +0530
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qlpAfzqZZHBrOWWXPQGddx5yuUYsUR+sw/YMs2nIwCKpP2/QDh1OZKFvNRB6eicKT24NNjl/HlS0LU1p7tHRPw==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 186ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-11-02 13:10:19 +0530
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb (42.8ms)
+Completed 200 OK in 67ms (Views: 60.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-11-02 13:11:02 +0530
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb (24.6ms)
+Completed 200 OK in 35ms (Views: 33.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-11-02 13:12:48 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/page/index.html.arb (437.2ms)
+Completed 200 OK in 510ms (Views: 449.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2018-11-02 13:13:00 +0530
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT DISTINCT "users"."user_role" FROM "users" ORDER BY user_role asc[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb (74.0ms)
+Completed 200 OK in 104ms (Views: 94.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/admin/users?utf8=%E2%9C%93&q%5Buser_role_eq%5D=admin&commit=Filter&order=id_desc" for 127.0.0.1 at 2018-11-02 13:13:08 +0530
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"user_role_eq"=>"admin"}, "commit"=>"Filter", "order"=>"id_desc"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" WHERE "users"."user_role" = 0 LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" WHERE "users"."user_role" = 0 LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."user_role" = 0[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" WHERE "users"."user_role" = 0 LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_role" = 0 ORDER BY "users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "users"."user_role" FROM "users" ORDER BY user_role asc[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb (53.9ms)
+Completed 200 OK in 92ms (Views: 84.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/users?utf8=%E2%9C%93&q%5Buser_role_eq%5D=anonymous&commit=Filter&order=id_desc" for 127.0.0.1 at 2018-11-02 13:13:12 +0530
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"user_role_eq"=>"anonymous"}, "commit"=>"Filter", "order"=>"id_desc"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" WHERE "users"."user_role" = 0 LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" WHERE "users"."user_role" = 0 LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."user_role" = 0[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" WHERE "users"."user_role" = 0 LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_role" = 0 ORDER BY "users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "users"."user_role" FROM "users" ORDER BY user_role asc[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb (61.9ms)
+Completed 200 OK in 101ms (Views: 96.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/users?utf8=%E2%9C%93&q%5Buser_role_eq%5D=admin&commit=Filter&order=id_desc" for 127.0.0.1 at 2018-11-02 13:13:16 +0530
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"user_role_eq"=>"admin"}, "commit"=>"Filter", "order"=>"id_desc"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" WHERE "users"."user_role" = 0 LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" WHERE "users"."user_role" = 0 LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."user_role" = 0[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" WHERE "users"."user_role" = 0 LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_role" = 0 ORDER BY "users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "users"."user_role" FROM "users" ORDER BY user_role asc[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb (53.0ms)
+Completed 200 OK in 91ms (Views: 85.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/users?utf8=%E2%9C%93&order=id_desc" for 127.0.0.1 at 2018-11-02 13:13:42 +0530
+Processing by Admin::UsersController#index as HTML
+  Parameters: {"utf8"=>"✓", "order"=>"id_desc"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "users"."user_role" FROM "users" ORDER BY user_role asc[0m
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/bundler/gems/inherited_resources-bf4a5bac90ea/lib/inherited_resources/actions.rb:7
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb (86.0ms)
+Completed 200 OK in 122ms (Views: 117.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/users/new" for 127.0.0.1 at 2018-11-02 13:13:54 +0530
+Processing by Admin::UsersController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/new.html.arb
+Started GET "/admin/users/new" for 127.0.0.1 at 2018-11-02 13:13:54 +0530
+Processing by Admin::UsersController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/new.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/new.html.arb (128.6ms)
+Completed 200 OK in 166ms (Views: 162.6ms | ActiveRecord: 0.3ms)
+
+
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/new.html.arb (74.5ms)
+Completed 200 OK in 106ms (Views: 102.1ms | ActiveRecord: 0.4ms)
+
+

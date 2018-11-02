@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -10,9 +12,9 @@ class User < ApplicationRecord
 
   include DeviseTokenAuth::Concerns::User
 
-  belongs_to :user_role
+  enum user_role: %i[admin anonymous merchant player]
 
   def has_access?
-    !user_role.nil? and user_role.slug.downcase == 'admin'.downcase
+    !user_role.nil? && user_role.admin?
   end
 end

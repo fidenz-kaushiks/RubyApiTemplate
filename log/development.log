@@ -31399,3 +31399,18 @@ Completed 200 OK in 166ms (Views: 162.6ms | ActiveRecord: 0.3ms)
 Completed 200 OK in 106ms (Views: 102.1ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/admin/users/new" for 127.0.0.1 at 2018-11-02 13:18:35 +0530
+Processing by Admin::UsersController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/new.html.arb
+  Rendered /Users/Choota/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/new.html.arb (51.2ms)
+Completed 500 Internal Server Error in 115ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Symbol into Integer):
+    1: insert_tag renderer_for(:new)
+  
+app/admin/users.rb:27:in `block (3 levels) in <main>'
+app/admin/users.rb:23:in `block (2 levels) in <main>'

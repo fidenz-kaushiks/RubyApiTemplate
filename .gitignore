@@ -62,4 +62,5 @@ yarn-debug.log*
 !/storage/.keep
 
 # Remove .idea files from project (specified for JetBrains RubyMine)
-**.idea/**
+.idea/
+*.iml

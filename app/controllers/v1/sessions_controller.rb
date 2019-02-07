@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class V1::SessionsController < ApiController
-  def create; end
+  # def create; super end
 
-  def destroy; end
+  # def destroy; super end
 end

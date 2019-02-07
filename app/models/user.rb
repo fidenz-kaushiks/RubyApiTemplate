@@ -1,16 +1,12 @@
-# frozen_string_literal: true
-
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :database_authenticatable,
-         :recoverable, :rememberable, :validatable
 
   include DeviseTokenAuth::Concerns::User
 
-  enum user_role: %i[admin anonymous merchant player]
+  enum role: [:member, :trainer, :groom, :owner, :agent]
 
-  def has_access?
-    !user_role.nil? && user_role == :admin
-  end
+  validates :first_name, :last_name, :email, :role, :phone, :address, :city, :state, :zipcode, presence: true
+
+  validates :phone, length: { minimum: 10 }, numericality: true
 end

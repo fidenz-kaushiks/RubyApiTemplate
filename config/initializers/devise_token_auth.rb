@@ -49,4 +49,5 @@ DeviseTokenAuth.setup do |config|
   # config.enable_standard_devise_support = false
   #
   #
+  config.default_confirm_success_url = "confirmed"
 end

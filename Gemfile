@@ -17,6 +17,7 @@ gem 'puma', '~> 3.11'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'pg', '~> 0.18'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -34,6 +35,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'sqlite3'
+  gem 'web-console', '>= 3.3.0'
 end
 
 group :development do

@@ -6,7 +6,7 @@ ActiveAdmin.register User do
   index do
     selectable_column
     id_column
-    column ("Full name") { |user| "#{user.first_name} #{user.last_name}"}
+    column :full_name
     column :email
     # column :current_sign_in_at
     # column :created_at
@@ -37,5 +37,19 @@ ActiveAdmin.register User do
       f.input :zipcode
     end
     f.actions
+  end
+
+  show do
+    attributes_table do
+      rows :first_name
+      rows :last_name
+      rows :email
+      rows :role
+      rows :phone
+      rows :address
+      rows :city
+      rows :state
+      rows :zipcode
+    end
   end
 end

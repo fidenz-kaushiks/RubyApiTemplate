@@ -1,5 +1,5 @@
 class Tier < ApplicationRecord
-  enum period: [:weekly, :monthly]
+  enum period: [:week, :month]
 
   validates :name, :description, :price, :period, :horses, presence: true
 

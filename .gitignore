@@ -3,6 +3,7 @@ capybara-*.html
 .rspec
 /log
 /tmp
+/tmp/*
 /db/*.sqlite3
 /db/*.sqlite3-journal
 /public/system
@@ -64,3 +65,5 @@ yarn-debug.log*
 # Remove .idea files from project (specified for JetBrains RubyMine)
 .idea/
 *.iml
+
+config/secrets.yml

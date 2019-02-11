@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_07_045346) do
+ActiveRecord::Schema.define(version: 2019_02_11_083517) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,51 @@ ActiveRecord::Schema.define(version: 2019_02_07_045346) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_admin_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
+  end
+
+  create_table "horses", force: :cascade do |t|
+    t.string "barn"
+    t.string "name"
+    t.integer "gender"
+    t.string "note"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_horses_on_user_id"
+  end
+
+  create_table "subscriptions", force: :cascade do |t|
+    t.string "plan_id"
+    t.string "subscription_id"
+    t.integer "status"
+    t.bigint "user_tier_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_tier_id"], name: "index_subscriptions_on_user_tier_id"
+  end
+
+  create_table "tiers", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.float "price"
+    t.integer "period"
+    t.integer "horses"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_tiers", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.float "price"
+    t.integer "period"
+    t.integer "horses"
+    t.bigint "user_id"
+    t.bigint "tier_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["tier_id"], name: "index_user_tiers_on_tier_id"
+    t.index ["user_id"], name: "index_user_tiers_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

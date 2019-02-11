@@ -8,13 +8,18 @@ ActiveAdmin.register User do
     id_column
     column :full_name
     column :email
-    # column :current_sign_in_at
-    # column :created_at
-    # column :sign_in_count
+    if(params[:scope].nil? || params[:scope]=='member')
+      column(:horses) do |user|
+        link_to(user.horses.count, admin_user_horses_path(user.id))
+      end
+    end
+    column :current_sign_in_at
+    column :created_at
+    column :sign_in_count
     actions
   end
 
-  permit_params :first_name, :last_name, :email ,:role , :password, :password_confirmation, :phone, :address, :city, :state, :zipcode
+  permit_params :first_name, :last_name, :email ,:role ,:phone, :address, :city, :state, :zipcode
 
   form do |f|
     f.inputs do
@@ -22,11 +27,6 @@ ActiveAdmin.register User do
       f.input :last_name
       f.input :email
       f.input :role
-    end
-
-    f.inputs do
-      f.input :password
-      f.input :password_confirmation
     end
 
     f.inputs do

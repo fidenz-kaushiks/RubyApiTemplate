@@ -8,18 +8,20 @@ module HorseStripe
     end
 
     def subscription(description)
-      return HorseStripe::Subscription.new(description, @tier, @user)
+      return HorseStripe::Subscribe.new(description, @tier, @user)
     end
   end
 
-  class Subscription
-    def initialize(description)
+  class Subscribe
+    def initialize(description, tier, user)
       @description = description
       @tier        = tier
+      @stripe_subscription = Subscription.new
+      @user = user
     end
 
-    def create(description)
-      customer = create_customer(@description)
+    def create
+      customer = create_customer
       plan     = create_plan
       if plan.nil?
         return false
@@ -74,7 +76,7 @@ module HorseStripe
       @@set_logger ||= Logger.new("log/paypal_payments.log")
     end
 
-    def create_customer(description)
+    def create_customer
       begin
         return Stripe::Customer.create(
           email: @user.email,

@@ -2,7 +2,11 @@ module Overrides
   class RegistrationsController < DeviseTokenAuth::RegistrationsController
 
     def create
-      super
+      super do |user|
+      	if user.persisted?
+      		
+      	end
+      end
     end
 
     private

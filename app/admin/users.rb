@@ -10,7 +10,18 @@ ActiveAdmin.register User do
     column :email
     if(params[:scope].nil? || params[:scope]=='member')
       column(:horses) do |user|
-        link_to(user.horses.count, admin_user_horses_path(user.id))
+        if user.has_tier?
+          link_to(user.horses.count, admin_user_horses_path(user))
+        else
+          "--"
+        end
+      end
+      column(:subscription) do |user|
+        if user.has_tier?
+          link_to(user.user_tier.name, admin_subscription_path(user.user_tier))
+        else
+          "--"
+        end
       end
     end
     column :current_sign_in_at
@@ -19,7 +30,7 @@ ActiveAdmin.register User do
     actions
   end
 
-  permit_params :first_name, :last_name, :email ,:role ,:phone, :address, :city, :state, :zipcode
+  permit_params :first_name, :last_name, :email ,:role , :password, :password_confirmation, :phone, :address, :city, :state, :zipcode, :subscription, :status
 
   form do |f|
     f.inputs do
@@ -29,6 +40,13 @@ ActiveAdmin.register User do
       f.input :role
     end
 
+    if f.object.new_record?
+      f.inputs do
+        f.input :password
+        f.input :password_confirmation
+      end
+    end
+
     f.inputs do
       f.input :phone
       f.input :address
@@ -36,6 +54,17 @@ ActiveAdmin.register User do
       f.input :state
       f.input :zipcode
     end
+
+    if f.object.new_record?
+      f.inputs do
+        f.input :subscription, as: :select, collection: Tier.all.map { |t| [t.name, t.id] }
+      end
+    else
+      f.inputs do
+        f.input :status
+      end
+    end
+
     f.actions
   end
 

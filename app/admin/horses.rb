@@ -20,7 +20,7 @@ ActiveAdmin.register Horse do
       f.input :name
       f.input :gender
       f.input :note
-      f.input :user
+      f.input :user, input_html: { disabled: true }
     end
     f.actions
   end

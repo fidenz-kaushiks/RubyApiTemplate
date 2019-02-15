@@ -1,6 +1,4 @@
 ActiveAdmin.register UserTier, as: 'Subscription' do
-  config.filters = false
-  Tier.periods.each { |period| scope period[0].to_sym }
   actions :all, except: [:new, :destroy, :edit]
 
   index do
@@ -8,7 +6,16 @@ ActiveAdmin.register UserTier, as: 'Subscription' do
     column :user
     column :name
     column :price
-    column :period
+    column :created_at
     actions
+  end
+
+  show do
+    attributes_table do
+      rows :user
+      rows :name
+      rows :price
+      rows :created_at
+    end
   end
 end

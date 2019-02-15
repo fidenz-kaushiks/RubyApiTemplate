@@ -4,7 +4,6 @@ module Overrides
     def create
       super do |user|
       	if user.persisted?
-      		
       	end
       end
     end
@@ -12,7 +11,7 @@ module Overrides
     private
 
     def sign_up_params
-      params.permit(:first_name, :last_name, :email, :password, :password_confirmation, :role, :phone, :address, :city, :state, :zipcode)
+      params.permit(:first_name, :last_name, :email, :password, :password_confirmation, :phone, :address, :city, :state, :zipcode, :subscription)
     end
   end
 end

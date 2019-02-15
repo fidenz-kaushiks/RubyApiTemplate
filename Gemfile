@@ -55,3 +55,5 @@ gem 'cancancan', '~> 1.15'
 gem 'devise'
 gem 'devise_token_auth'
 gem 'inherited_resources', git: 'https://github.com/activeadmin/inherited_resources'
+
+gem 'rack-cors'

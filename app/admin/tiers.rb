@@ -1,25 +1,32 @@
 ActiveAdmin.register Tier do
-  filter :name_contains, label: "Tier name"
-  Tier.periods.each { |period| scope period[0].to_sym }
+  config.filters = false
+  actions :all, except: [:new, :destroy]
+  # Tier.periods.each { |period| scope period[0].to_sym }
 
   index do
-    selectable_column
     id_column
     column :name
     column :price
-    column :horses
+    column (:max_horses) { |tier| tier.horses}
+    column :description
+    column :updated_at
     actions
   end
 
-  permit_params :name, :description, :price, :period, :horses
+  permit_params :name, :description
 
   form do |f|
     f.inputs do
       f.input :name
       f.input :description
-      f.input :price
-      f.input :period
-      f.input :horses
+      li class: 'text input required' do
+        label 'Tier Price'
+        div f.resource.price
+      end
+      li class: 'text input required' do
+        label 'Maximum Horses'
+        div f.resource.horses
+      end
     end
     f.actions
   end
@@ -29,8 +36,8 @@ ActiveAdmin.register Tier do
       rows :name
       rows :description
       rows :price
-      rows :period
       rows :horses
+      rows :updated_at
     end
   end
 end

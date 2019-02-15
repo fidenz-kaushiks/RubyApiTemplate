@@ -1,7 +1,8 @@
 ActiveAdmin.register User do
-  filter :email_contains, label: "user's email"
+  filter :first_name_or_last_name_cont, as: :string, label: "Name"
+  filter :email_contains, label: "email address"
 
-  User.roles.each { |role| scope role[0].to_sym }
+  # User.roles.each { |role| scope role[0].to_sym }
 
   index do
     selectable_column
@@ -30,15 +31,13 @@ ActiveAdmin.register User do
     actions
   end
 
-  permit_params :first_name, :last_name, :email ,:role , :password, :password_confirmation, :phone, :address, :city, :state, :zipcode, :subscription, :status
+  permit_params :first_name, :last_name, :email ,:password, :password_confirmation, :phone, :address, :city, :state, :zipcode, :subscription, :status
 
   form do |f|
     f.inputs do
       f.input :first_name
       f.input :last_name
       f.input :email
-      f.input :role
-    end
 
     if f.object.new_record?
       f.inputs do
@@ -47,7 +46,6 @@ ActiveAdmin.register User do
       end
     end
 
-    f.inputs do
       f.input :phone
       f.input :address
       f.input :city
@@ -58,10 +56,6 @@ ActiveAdmin.register User do
     if f.object.new_record?
       f.inputs do
         f.input :subscription, as: :select, collection: Tier.all.map { |t| [t.name, t.id] }
-      end
-    else
-      f.inputs do
-        f.input :status
       end
     end
 
@@ -79,6 +73,11 @@ ActiveAdmin.register User do
       rows :city
       rows :state
       rows :zipcode
+      row ('subscription') do
+        user.has_tier? ? user.user_tier : '--'
+      end
+      rows :created_at
+      rows :updated_at
     end
   end
 end

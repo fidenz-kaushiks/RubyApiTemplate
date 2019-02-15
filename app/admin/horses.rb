@@ -1,5 +1,6 @@
 ActiveAdmin.register Horse do
   belongs_to :user
+  # actions :all, except: [:new, :destroy, :edit]
   filter :name_contains, label: "Horse name"
 
   permit_params :barn, :name, :gender, :note, :user
@@ -15,12 +16,17 @@ ActiveAdmin.register Horse do
   end
 
   form do |f|
+    f.semantic_errors(*f.object.errors[:base].first)
+
     f.inputs do
       f.input :barn
       f.input :name
       f.input :gender
       f.input :note
-      f.input :user, input_html: { disabled: true }
+      li class: 'text input required' do
+        label 'user'
+        div f.resource.user.full_name
+      end
     end
     f.actions
   end

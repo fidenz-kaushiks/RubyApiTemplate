@@ -9,13 +9,13 @@ class Horse < ApplicationRecord
 
   def limit_horses
     if user.has_tier?
-      if (user.horse_count <= 1)
+      if (user.horse_count < user.tier_horse_count)
         return true
       else
-        errors.add(:user, "")
+        errors.add(:base, "#{user.full_name} has only subscribe to #{user.tier_horse_count} horses.")
       end
     else
-      errors.add(:base, "Too many answers.")
+      errors.add(:base, "#{user.full_name} has no subscriptions.")
     end
     return false
   end

@@ -3,7 +3,7 @@ ActiveAdmin.register Horse do
   # actions :all, except: [:new, :destroy, :edit]
   filter :name_contains, label: "Horse name"
 
-  permit_params :barn, :name, :gender, :note, :user
+  permit_params :barn, :name, :gender, :note, :color, :user
 
   index do
     selectable_column
@@ -12,6 +12,7 @@ ActiveAdmin.register Horse do
     column :name
     column :gender
     column :user
+    column :color
     actions
   end
 
@@ -27,6 +28,7 @@ ActiveAdmin.register Horse do
         label 'user'
         div f.resource.user.full_name
       end
+      f.input :color
     end
     f.actions
   end

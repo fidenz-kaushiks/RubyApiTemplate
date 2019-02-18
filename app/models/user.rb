@@ -11,7 +11,9 @@ class User < ApplicationRecord
 
   validates :first_name, :last_name, :email, :role, :phone, :address, :city, :state, :zipcode, :status, presence: true
 
-  validates :phone, length: { minimum: 10 }, numericality: true
+  validates :phone, length: { minimum: 10, maximum: 10 }, numericality: true
+  validates :zipcode, length: { minimum: 5, maximum: 5 }, numericality: true
+
   validates :subscription, presence: true, on: :create
 
   after_commit :add_tier, on: :create
@@ -45,6 +47,10 @@ class User < ApplicationRecord
 
   def tier
     has_tier? ? user_tier.id : -1
+  end
+
+  def is_forbidden?
+    horse_count >= tier_horse_count
   end
 
   private

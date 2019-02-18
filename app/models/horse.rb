@@ -3,19 +3,20 @@ class Horse < ApplicationRecord
 
   enum gender: [:female, :male]
 
-  validates :barn, :name, :gender, :note, presence: true
+  validates :barn, :name, :gender, :note, :color, presence: true
 
-  before_validation :limit_horses
+  before_validation :limit_horses, on: :create
 
   def limit_horses
+    return false if user.nil?
     if user.has_tier?
-      if (user.horse_count < user.tier_horse_count)
-        return true
+      if user.is_forbidden?
+        errors.add(:base, "You have only subscribe to #{user.tier_horse_count} horses.")
       else
-        errors.add(:base, "#{user.full_name} has only subscribe to #{user.tier_horse_count} horses.")
+        return true
       end
     else
-      errors.add(:base, "#{user.full_name} has no subscriptions.")
+      errors.add(:base, "You have no subscriptions.")
     end
     return false
   end

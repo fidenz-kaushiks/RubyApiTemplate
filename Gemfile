@@ -57,3 +57,4 @@ gem 'devise_token_auth'
 gem 'inherited_resources', git: 'https://github.com/activeadmin/inherited_resources'
 
 gem 'rack-cors'
+gem 'city-state'

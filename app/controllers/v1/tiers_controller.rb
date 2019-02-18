@@ -4,6 +4,6 @@ class V1::TiersController < ApiController
     render json: {
       tiers: tiers
     }.to_json,
-	  status: (tiers.blank? ? :no_content : :ok)
+    status: (tiers.blank? ? :no_content : :ok)
   end
 end

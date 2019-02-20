@@ -1,8 +1,12 @@
 class V1::StatesController < ApiController
 	def index
-    states = CS.states(:us)
+    keys = CS.states(:us).keys
+    i = 0
+    states = keys.collect { |item|
+    	{id: keys.index(item), item: item}
+    }
     render json: {
-      horses: CS.states(:us).keys
+      data: states
     }, status: :ok
   end
 end

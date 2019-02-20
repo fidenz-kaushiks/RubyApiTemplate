@@ -15,5 +15,6 @@ Rails.application.routes.draw do
     resources :tiers, only: [:index]
     resources :horses
     resources :states, only: [:index]
+    post 'users/step1' => 'users#step1'
   end
 end

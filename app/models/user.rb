@@ -11,10 +11,11 @@ class User < ApplicationRecord
 
   validates :first_name, :last_name, :email, :role, :phone, :address, :city, :state, :zipcode, :status, presence: true
 
+  validates :email, uniqueness: true
   validates :phone, length: { minimum: 10, maximum: 10 }, numericality: true
   validates :zipcode, length: { minimum: 5, maximum: 5 }, numericality: true
 
-  validates :subscription, presence: true, on: :create
+  validates :subscription, presence: true, allow_blank: true, on: :create
 
   after_commit :add_tier, on: :create
   before_save :skip_email_confirmation
@@ -51,6 +52,10 @@ class User < ApplicationRecord
 
   def is_forbidden?
     horse_count >= tier_horse_count
+  end
+
+  def is_password_changed?
+    self.encrypted_password != self.encrypted_password_was
   end
 
   private
